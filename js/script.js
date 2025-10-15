@@ -289,3 +289,16 @@ function estaNaTela(elemento) {
 }
 
 console.log('✅ Todas as funcionalidades JavaScript foram carregadas!');
+
+// [extra] Tecla "t" alterna o tema (claro/escuro) e salva a preferência
+document.addEventListener('keydown', (e) => {
+  if (e.key.toLowerCase() === 't') {
+    const b = document.body;
+    const escuro = b.classList.toggle('tema-escuro');
+    localStorage.setItem('temaRecycle', escuro ? 'escuro' : 'claro');
+    console.log('Tema:', escuro ? 'escuro' : 'claro');
+  }
+});
+// [extra] Acessibilidade: "Enter" ativa o link de pontos (#btnPontos)
+const p = document.getElementById('btnPontos');
+if (p) p.addEventListener('keydown', (e) => { if (e.key === 'Enter') p.click(); });

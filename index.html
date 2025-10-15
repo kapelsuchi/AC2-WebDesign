@@ -1,99 +1,501 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Recycle</title>
-    <meta name="description" content="Bem-vindo ao Recycle - sua plataforma para reciclagem eficiente e sustentável. Junte-se a nós na missão de proteger o meio ambiente!">
-    <meta name="keywords" content="reciclagem, sustentabilidade, meio ambiente, reciclar, lixo, ecologia">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
+  <!--Atribuição de links, meta dados e titulo ao site-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home | Recycle</title>
+  <meta name="description" content="Bem-vindo ao Recycle - sua plataforma para reciclagem eficiente e sustentável. Junte-se a nós na missão de proteger o meio ambiente!" />
+  <meta name="keywords" content="reciclagem, sustentabilidade, meio ambiente, reciclar, lixo, ecologia, PET, latas de alumínio" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
+  <!-- Cabeçalho / Navegação -->
+  <header class="cabecalhoContainer" role="banner">
+    <div>
+      <nav class="menu" aria-label="Principal">
+        <ul id="menuNav">
+          <li><a href="#heroIntroducao">Home</a></li>
+          <li><a href="#ods">ODSs</a></li>
+          <li><a href="#sobremaquina">Sobre a Máquina</a></li>
+          <li><a href="#tecnologiaTransforma">Tecnologia</a></li>
+          <li><a href="#parceiros">Parceiros</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <ul id="menuLogin">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="#perfil">Meu perfil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <header class="cabecalhoContainer">
-        <div>
-            <nav class="menu">
-                <ul id="menuNav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="ods.html">ODSs</a></li>
-                    <li><a href="sobremaquina.html">Sobre a Máquina</a></li>
-                    <li><a href="sobrenos.html">Sobre Nós</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-                <ul id="menuLogin">
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="cadastro.html">Meu perfil</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="heroIntroducao" class="secaoHero">
+  <!-- Hero -->
+  <section id="heroIntroducao" class="secaoHero">
     <div class="conteudoHero">
-        <span class="tagInovacao">🎶 Inovação Sustentável!</span>
-        <h1 class="tituloPrincipal">Conheça a <span class="destaqueTitulo">Recycle</span></h1>
-        <p class="textoDescricao">A máquina inteligente que transforma o descarte de PETs e latas de alumínio em uma experiência moderna, gratificante e sustentável. Simples, bonita e eficaz.</p>
-        <div class="areaBotoes">
-            <a href="#" class="botaoPrimario">Saiba Mais →</a>
-            <a href="#" class="botaoSecundario">Ver em Ação</a>
-        </div>
+      <span class="tagInovacao" aria-label="Selo de inovação sustentável">♻️ Inovação Sustentável</span>
+      <h1 class="tituloPrincipal">Conheça a <span class="destaqueTitulo">Recycle</span></h1>
+      <p class="textoDescricao" id="textoDescricao">A máquina inteligente que transforma o descarte de PETs e latas de alumínio em uma experiência moderna, gratificante e sustentável.</p>
+      <div class="areaBotoes">
+        <a href="#sobremaquina" class="botaoPrimario">Como funciona</a>
+        <a href="#video" class="botaoSecundario">Ver em Ação</a>
+      </div>
     </div>
     <div class="imagemHero">
-        <div class="quadroImagem">
-            </div>
+      <div class="quadroImagem" aria-label="Mock da máquina de reciclagem"></div>
     </div>
-</section>
+  </section>
 
-<section id="tecnologiaTransforma" class="secaoTecnologia">
-    <h2 class="tituloSecundario">Tecnologia que <span class="destaqueTitulo">Transforma</span></h2>
-    <p class="subtituloTecnologia">Nossa máquina combina inteligência artificial, design sustentável e facilidade de uso para revolucionar a forma como reciclamos materiais no dia a dia.</p>
-    
+  <!-- ODSs -->
+  <section id="ods" class="secaoTecnologia" aria-labelledby="ods-titulo">
+
+    <h2 id="ods-titulo" class="tituloSecundario">ODSs que <span class="destaqueTitulo">Apoiamos</span></h2>
+    <p class="subtituloTecnologia">Nosso projeto se alinha às ODS 11, 12 e 13 — inspirando consumo responsável, cidades sustentáveis e ação climática.</p>
     <div class="cardsRecursos">
-        <div class="cardRecurso">
-            <div class="iconeCard">
-                <svg viewBox="0 0 24 24" class="svgIcone"><path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM17 14L12 11V18L17 14ZM12 6L7 9L12 12L17 9L12 6Z" fill="currentColor"/></svg>
-            </div>
-            <h3 class="tituloCard">Coleta Inteligente</h3>
-            <p class="textoCard">Reconhecimento automático de PETs e latas de alumínio com sensores de última geração</p>
-        </div>
-        
-        <div class="cardRecurso">
-            <div class="iconeCard">
-                <svg viewBox="0 0 24 24" class="svgIcone"><path d="M4 4H20V20H4V4ZM6 6V18H18V6H6Z" fill="currentColor"/></svg>
-            </div>
-            <h3 class="tituloCard">Interface Touchscreen</h3>
-            <p class="textoCard">Experiência intuitiva e gamificada que incentiva a reciclagem consciente</p>
-        </div>
-        
-        <div class="cardRecurso">
-            <div class="iconeCard">
-                <svg viewBox="0 0 24 24" class="svgIcone"><path d="M16 8V16H18V8H16ZM12 4V16H14V4H12ZM8 12V16H10V12H8Z" fill="currentColor"/></svg>
-            </div>
-            <h3 class="tituloCard">Recompensas</h3>
-            <p class="textoCard">Sistema de pontos e benefícios para usuários comprometidos com o meio ambiente</p>
-        </div>
-        
-        <div class="cardRecurso">
-            <div class="iconeCard">
-                <svg viewBox="0 0 24 24" class="svgIcone"><path d="M17 8C17 4.13 13.87 1 10 1C6.13 1 3 4.13 3 8C3 11.23 7.84 18.06 10 21C12.16 18.06 17 11.23 17 8Z" fill="currentColor"/></svg>
-            </div>
-            <h3 class="tituloCard">Sustentabilidade</h3>
-            <p class="textoCard">Contribuição direta para a economia circular e preservação ambiental</p>
-        </div>
-    </div>
-</section>
 
-<section id="planetaSustentavel" class="secaoSustentavel">
+      <article class="cardRecurso"><div class="iconeCard">11</div><h3 class="tituloCard">ODS 11</h3><p class="textoCard">Cidades e comunidades sustentáveis.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">12</div><h3 class="tituloCard">ODS 12</h3><p class="textoCard">Consumo e produção responsáveis.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">13</div><h3 class="tituloCard">ODS 13</h3><p class="textoCard">Ação contra a mudança global do clima.</p></article>
+    </div>
+  </section>
+
+  <!-- Sobre a Máquina / Passos -->
+  <section id="sobremaquina" class="secaoSustentavel" aria-labelledby="sobre-titulo">
+
     <div class="caixaInformativa">
-        <h2 class="tituloCaixa">Juntos por um Planeta Sustentável</h2>
-        <p class="textoCaixa">Cada garrafa PET e lata de alumínio reciclada é um passo em direção aos Objetivos de Desenvolvimento Sustentável da ONU e um futuro mais verde para todos.</p>
+
+      <h2 id="sobre-titulo" class="tituloCaixa">Como a máquina funciona</h2>
+      <p class="textoCaixa">Do reconhecimento do material ao acúmulo de pontos — tudo pensado para facilitar a reciclagem no dia a dia.</p>
+      <ol class="listaPassos">
+        <li class="passo reveal">Identificação do material (PET/Alumínio) com sensores IR e detecção de metal.</li>
+        <li class="passo reveal">Validação e abertura de porta controlada por servo.</li>
+        <li class="passo reveal">Pontuação imediata e exibição no display LCD.</li>
+        <li class="passo reveal">Geração de QR Code/ID para resgate de benefícios.</li>
+        <li class="passo reveal">Sincronização opcional com o painel web (modo offline suportado).</li>
+      </ol>
     </div>
-</section>
+  </section>
 
-<button id="botaoTema" class="botaoFlutuante" title="Alternar tema" style="bottom: 100px; right: 20px;">🌓</button>
-<button id="botaoTopo" class="botaoFlutuante" title="Voltar ao topo" style="bottom: 160px; right: 20px;">↑</button>
+  <!-- Tecnologia: 20 Cards com Content + Padding + Border + Margin -->
+  <section id="tecnologiaTransforma" class="secaoTecnologia" aria-labelledby="tec-titulo">
+    <h2 id="tec-titulo" class="tituloSecundario">Tecnologia que <span class="destaqueTitulo">Transforma</span></h2>
+    <p class="subtituloTecnologia">Hardware e software trabalhando juntos pela sustentabilidade — interface amigável, telemetria e recompensas.</p>
+    <div class="cardsRecursos">
+        <!-- 20 cards: cada um tem content + padding + border + (patch adiciona margin) -->
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Coleta Inteligente</h3><p class="textoCard">Reconhece PETs e latas com sensores.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Interface Touch</h3><p class="textoCard">Experiência gamificada e acessível.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Recompensas</h3><p class="textoCard">Sistema de pontos e ranking.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Sustentabilidade</h3><p class="textoCard">Economia circular aplicada.</p></article>
 
-<script src="./js/script.js"></script>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Sensores IR</h3><p class="textoCard">Barreira óptica confiável.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Detector de Metais</h3><p class="textoCard">Detecta latas rapidamente.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Servo da Porta</h3><p class="textoCard">Segurança no depósito.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">LCD 16x2</h3><p class="textoCard">Feedback imediato ao usuário.</p></article>
+
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">ESP32</h3><p class="textoCard">Conectividade Wi-Fi/Bluetooth.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Gamificação</h3><p class="textoCard">Metas, conquistas e badges.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">QR Code</h3><p class="textoCard">Resgate fácil de pontos.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Dashboard</h3><p class="textoCard">Telemetria e relatórios.</p></article>
+
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Relatórios</h3><p class="textoCard">Prestação de contas.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Economia Circular</h3><p class="textoCard">Ciclo de materiais.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Educação</h3><p class="textoCard">Ações e campanhas.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Design Modular</h3><p class="textoCard">Troca rápida de módulos.</p></article>
+
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Modo Offline</h3><p class="textoCard">Opera sem internet.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Integração Web</h3><p class="textoCard">Sincronização posterior.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Acessibilidade</h3><p class="textoCard">Uso por todos.</p></article>
+      <article class="cardRecurso"><div class="iconeCard">◎</div><h3 class="tituloCard">Segurança</h3><p class="textoCard">Operação confiável.</p></article>
+    </div>
+  </section>
+
+  <!-- Vídeo / Demonstração -->
+  <section id="video" class="secaoSustentavel" aria-labelledby="video-titulo">
+    <div class="caixaInformativa">
+      <h2 id="video-titulo" class="tituloCaixa">Veja em Ação</h2>
+      <p class="textoCaixa">Assista à demonstração do fluxo completo — do depósito ao resgate de pontos.</p>
+      <div class="videoMock" role="img" aria-label="Vídeo demonstrativo (mock)">Vídeo demonstrativo</div>
+    </div>
+  </section>
+
+  <!-- Tabela de Materiais Aceitos -->
+  <section id="materiais" class="secaoTecnologia" aria-labelledby="materiais-titulo">
+    <h2 id="materiais-titulo" class="tituloSecundario">Materiais <span class="destaqueTitulo">Aceitos</span></h2>
+    <p class="subtituloTecnologia">Tipos, condições e instruções de preparo antes do depósito.</p>
+    <div class="tabelaWrapper">
+      <table class="tabelaMateriais" aria-describedby="materiais-descricao">
+        <caption id="materiais-descricao">Regras para garantir a qualidade da reciclagem.</caption>
+        <thead>
+          <tr>
+            <th>Material</th>
+            <th>Condição</th>
+            <th>Observações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Garrafa PET</td>
+            <td>Limpa e seca</td>
+            <td>Sem tampa preferencialmente; amassar reduz volume.</td>
+          </tr>
+          <tr>
+            <td>Lata de Alumínio</td>
+            <td>Limpa</td>
+            <td>Evitar resíduos de líquido.</td>
+          </tr>
+          <tr>
+            <td>Outros plásticos</td>
+            <td>—</td>
+            <td>Não aceitos neste protótipo.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Ranking / Gamificação -->
+  <section id="ranking" class="secaoSustentavel" aria-labelledby="ranking-titulo">
+    <div class="caixaInformativa">
+      <h2 id="ranking-titulo" class="tituloCaixa">Ranking de Pontos</h2>
+      <p class="textoCaixa">Top usuários da semana. Conquiste badges especiais ao atingir metas.</p>
+      <ol class="listaRanking">
+        <li class="reveal">Ana — 120 pts</li>
+        <li class="reveal">Lucas — 105 pts</li>
+        <li class="reveal">Mariana — 98 pts</li>
+        <li class="reveal">Pedro — 92 pts</li>
+        <li class="reveal">Sofia — 81 pts</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="secaoTecnologia" aria-labelledby="depoimentos-titulo">
+    <h2 id="depoimentos-titulo" class="tituloSecundario">O que as pessoas <span class="destaqueTitulo">dizem</span></h2>
+    <p class="subtituloTecnologia">Impacto social e ambiental percebido por estudantes e comunidade.</p>
+    <div class="cardsRecursos">
+      <article class="cardRecurso">
+        <div class="iconeCard">🙂</div>
+        <h3 class="tituloCard">João</h3>
+        <p class="textoCard">“Ficou muito fácil reciclar entre uma aula e outra.”</p>
+      </article>
+      <article class="cardRecurso">
+        <div class="iconeCard">🌱</div>
+        <h3 class="tituloCard">Carla</h3>
+        <p class="textoCard">“Comecei a juntar as garrafas da turma e levar na máquina.”</p>
+      </article>
+      <article class="cardRecurso">
+        <div class="iconeCard">⭐</div>
+        <h3 class="tituloCard">Bruno</h3>
+        <p class="textoCard">“O sistema de pontos é motivador e divertido.”</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Parceiros (grid rolável) -->
+  <section id="parceiros" class="secaoTecnologia" aria-labelledby="parceiros-titulo">
+    <h2 id="parceiros-titulo" class="tituloSecundario">Parceiros <span class="destaqueTitulo">do Projeto</span></h2>
+    <p class="subtituloTecnologia">Apoio institucional, coleta seletiva e comércio local.</p>
+    <div class="carrossel" aria-label="Logotipos de parceiros">
+      <div class="logoParceiro">Universidade</div>
+      <div class="logoParceiro">Prefeitura</div>
+      <div class="logoParceiro">Cooperativa</div>
+      <div class="logoParceiro">Comércio 1</div>
+      <div class="logoParceiro">Comércio 2</div>
+      <div class="logoParceiro">ONG A</div>
+      <div class="logoParceiro">ONG B</div>
+      <div class="logoParceiro">EcoTech</div>
+      <div class="logoParceiro">Patrocínio X</div>
+      <div class="logoParceiro">Patrocínio Y</div>
+    </div>
+  </section>
+
+  <!-- Cronograma / Roadmap -->
+  <section id="roadmap" class="secaoSustentavel" aria-labelledby="roadmap-titulo">
+    <div class="caixaInformativa">
+      <h2 id="roadmap-titulo" class="tituloCaixa">Cronograma de Entrega</h2>
+      <p class="textoCaixa">Planejamento de marcos: protótipo, testes e implantação.</p>
+      <ul class="listaPassos">
+        <li class="reveal">Fase 1 — Protótipo funcional (sensores + LCD + pontos)</li>
+        <li class="reveal">Fase 2 — Interface touchscreen + QR Code</li>
+        <li class="reveal">Fase 3 — Dashboard e relatórios</li>
+        <li class="reveal">Fase 4 — Parcerias e incentivos</li>
+        <li class="reveal">Fase 5 — Implantação ampliada</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Perguntas Frequentes (FAQ) -->
+  <section id="faq" class="secaoTecnologia" aria-labelledby="faq-titulo">
+    <h2 id="faq-titulo" class="tituloSecundario">Perguntas <span class="destaqueTitulo">Frequentes</span></h2>
+    <p class="subtituloTecnologia">Tire dúvidas sobre materiais, pontos e funcionamento.</p>
+    <div class="faqLista">
+      <details class="faqItem">
+        <summary>Quais materiais a máquina aceita?</summary>
+        <p>PETs e latas de alumínio. Garrafas e latas devem estar limpas.</p>
+      </details>
+      <details class="faqItem">
+        <summary>Como os pontos são calculados?</summary>
+        <p>Por item depositado; campanhas podem dar bônus temporários.</p>
+      </details>
+      <details class="faqItem">
+        <summary>Preciso de internet para usar?</summary>
+        <p>Não. Há modo offline com sincronização posterior.</p>
+      </details>
+      <details class="faqItem">
+        <summary>Como resgatar meus pontos?</summary>
+        <p>Use o QR Code/ID emitido pela máquina para resgatar benefícios.</p>
+      </details>
+      <details class="faqItem">
+        <summary>Onde vejo meus relatórios?</summary>
+        <p>Na área do usuário, com métricas básicas e histórico.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Formulário de Contato -->
+  <section id="contato" class="secaoSustentavel" aria-labelledby="contato-titulo">
+    <div class="caixaInformativa">
+      <h2 id="contato-titulo" class="tituloCaixa">Fale Conosco</h2>
+      <p class="textoCaixa">Dúvidas e sugestões são bem-vindas. Retornamos em breve!</p>
+      <form id="formContato" novalidate>
+        <div class="grupoCampo">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" required placeholder="Seu nome completo" />
+        </div>
+        <div class="grupoCampo">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="seu@email.com"/>
+        </div>
+        <div class="grupoCampo">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Escreva sua mensagem"></textarea>
+        </div>
+        <button type="submit" class="botaoPrimario">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Acessibilidade -->
+  <section id="acessibilidade" class="secaoTecnologia" aria-labelledby="acessibilidade-titulo">
+    <h2 id="acessibilidade-titulo" class="tituloSecundario">Compromisso com a <span class="destaqueTitulo">Acessibilidade</span></h2>
+    <p class="subtituloTecnologia">Texto alternativo, navegação por teclado e contraste de cores considerados desde o início.</p>
+    <ul class="listaAcessibilidade">
+      <li class="reveal">Áreas clicáveis com texto descritivo.</li>
+      <li class="reveal">Semântica HTML em seções principais.</li>
+      <li class="reveal">Foco visível e ordem lógica de navegação.</li>
+      <li class="reveal">Ícones acompanhados de rótulos quando necessário.</li>
+    </ul>
+  </section>
+
+  <!-- Política de Uso / Termos simples -->
+  <section id="politica" class="secaoSustentavel" aria-labelledby="politica-titulo">
+    <div class="caixaInformativa">
+      <h2 id="politica-titulo" class="tituloCaixa">Política de Uso</h2>
+      <p class="textoCaixa">A máquina é um projeto acadêmico; evite depositar materiais não aceitos para manter o sistema confiável.</p>
+      <ul class="listaPassos">
+        <li class="reveal">Depositantes são responsáveis pelo preparo adequado do material.</li>
+        <li class="reveal">O resgate de pontos depende da disponibilidade de parceiros.</li>
+        <li class="reveal">Em caso de dúvidas, utilize o formulário de contato.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="rodape" role="contentinfo">
+    <p>© 2025 Recycle — Projeto acadêmico. Todos os direitos reservados.</p>
+    <p><a href="#" id="btnPontos">Ver meus pontos</a></p>
+  </footer>
+
+  <!-- Botões flutuantes do seu JS -->
+  <button id="botaoTema" class="botaoFlutuante" title="Alternar tema" style="bottom: 100px; right: 20px;">🌓</button>
+  <button id="botaoTopo" class="botaoFlutuante" title="Voltar ao topo" style="bottom: 160px; right: 20px;">↑</button>
+
+    <!-- ===== SEÇÃO: Benefícios do Sistema (lista longa) ===== -->
+  <section id="beneficios" class="secaoTecnologia" aria-labelledby="beneficios-titulo">
+    <h2 id="beneficios-titulo" class="tituloSecundario">Benefícios para a <span class="destaqueTitulo">Comunidade</span></h2>
+    <p class="subtituloTecnologia">Resultados práticos da implementação da máquina de reciclagem.</p>
+    <ul class="listaAcessibilidade">
+      <li class="reveal">Redução de resíduos em áreas comuns e salas de aula.</li>
+      <li class="reveal">Conscientização ambiental por meio de interação gamificada.</li>
+      <li class="reveal">Integração com campanhas e eventos sustentáveis.</li>
+      <li class="reveal">Relatórios para prestação de contas a parceiros e gestores.</li>
+      <li class="reveal">Engajamento estudantil por metas e rankings semanais.</li>
+      <li class="reveal">Facilidade de uso: interface simples e feedback imediato.</li>
+      <li class="reveal">Visibilidade de impacto: itens coletados e CO₂ evitado.</li>
+      <li class="reveal">Criação de trilhas de educação ambiental.</li>
+      <li class="reveal">Parcerias com comércio local para cupons e benefícios.</li>
+      <li class="reveal">Estímulo à economia circular dentro do campus.</li>
+      <li class="reveal">Dados históricos para decisões sobre coleta e logística.</li>
+      <li class="reveal">Cultura de descarte correto de materiais recicláveis.</li>
+      <li class="reveal">Aumento da taxa de reciclagem de PET e alumínio.</li>
+      <li class="reveal">Fortalecimento do relacionamento com cooperativas.</li>
+      <li class="reveal">Modelo replicável em outras unidades e cidades.</li>
+    </ul>
+  </section>
+
+  <!-- ===== SEÇÃO: Especificações Técnicas (tabela) ===== -->
+  <section id="especificacoes" class="secaoSustentavel" aria-labelledby="especificacoes-titulo">
+    <div class="caixaInformativa">
+      <h2 id="especificacoes-titulo" class="tituloCaixa">Especificações Técnicas</h2>
+      <p class="textoCaixa">Componentes principais da versão atual do protótipo.</p>
+      <div class="tabelaWrapper">
+        <table class="tabelaMateriais" aria-label="Tabela de componentes e funções">
+          <thead>
+            <tr>
+              <th>Componente</th>
+              <th>Modelo/Tipo</th>
+              <th>Função</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Microcontrolador</td>
+              <td>ESP32</td>
+              <td>Processamento, Wi-Fi/BLE, integração com dashboard.</td>
+            </tr>
+            <tr>
+              <td>Sensores</td>
+              <td>Infravermelho + Indução</td>
+              <td>Detecção de passagem e identificação de metal.</td>
+            </tr>
+            <tr>
+              <td>Ato­ador</td>
+              <td>Servo padrão 9g</td>
+              <td>Abertura/fechamento da porta de retenção.</td>
+            </tr>
+            <tr>
+              <td>Exibição</td>
+              <td>LCD 16x2 I²C</td>
+              <td>Feedback ao usuário (pontos, status, mensagens).</td>
+            </tr>
+            <tr>
+              <td>Entrada</td>
+              <td>Touchscreen (futuro)</td>
+              <td>Interface direta para navegação e confirmações.</td>
+            </tr>
+            <tr>
+              <td>Energia</td>
+              <td>Fonte 5V/2A</td>
+              <td>Alimentação de placas e periféricos.</td>
+            </tr>
+            <tr>
+              <td>Rede</td>
+              <td>Wi-Fi 2.4 GHz</td>
+              <td>Sincronização de dados e atualização de campanhas.</td>
+            </tr>
+            <tr>
+              <td>Estrutura</td>
+              <td>Chapa/impresso 3D</td>
+              <td>Gabinete modular para manutenção simples.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO: Manual do Usuário (passo a passo detalhado) ===== -->
+  <section id="manual-usuario" class="secaoTecnologia" aria-labelledby="manual-titulo">
+    <h2 id="manual-titulo" class="tituloSecundario">Manual do <span class="destaqueTitulo">Usuário</span></h2>
+    <p class="subtituloTecnologia">Fluxo recomendado para o descarte correto e resgate de pontos.</p>
+    <ol class="listaPassos">
+      <li class="reveal">Verifique se a embalagem está vazia e sem líquidos.</li>
+      <li class="reveal">Amasse suavemente a garrafa PET para reduzir volume (opcional).</li>
+      <li class="reveal">Abra a portinhola quando a tela indicar que a máquina está pronta.</li>
+      <li class="reveal">Deposite o item no compartimento indicado.</li>
+      <li class="reveal">Aguarde a confirmação no display (contagem e pontos).</li>
+      <li class="reveal">Se disponível, aponte a câmera para o QR Code gerado.</li>
+      <li class="reveal">Acompanhe seus pontos na área de usuário do dashboard.</li>
+      <li class="reveal">Em caso de erro, utilize o botão de ajuda ou o formulário de contato.</li>
+    </ol>
+  </section>
+
+  <!-- ===== SEÇÃO: Pontos de Coleta Parceiros (endereços) ===== -->
+  <section id="pontos-coleta" class="secaoSustentavel" aria-labelledby="pontos-titulo">
+    <div class="caixaInformativa">
+      <h2 id="pontos-titulo" class="tituloCaixa">Pontos de Coleta Parceiros</h2>
+      <p class="textoCaixa">Locais próximos para entregar materiais quando a máquina estiver em manutenção ou em horários alternativos.</p>
+      <ul class="listaAcessibilidade">
+        <li class="reveal">
+          <strong>Cooperativa Verde Vida</strong><br />
+          <address>Rua das Palmeiras, 120 — Centro</address>
+        </li>
+        <li class="reveal">
+          <strong>Eco Ponto Universitário</strong><br />
+          <address>Av. do Campus, 500 — Bloco B</address>
+        </li>
+        <li class="reveal">
+          <strong>Associação Recicla+</strong><br />
+          <address>Rua das Acácias, 78 — Bairro Norte</address>
+        </li>
+        <li class="reveal">
+          <strong>Coleta Seletiva Municipal</strong><br />
+          <address>Av. Ambiental, 2500 — Distrito Industrial</address>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO: Transparência (tabela de resultados) ===== -->
+  <section id="transparencia" class="secaoTecnologia" aria-labelledby="transparencia-titulo">
+    <h2 id="transparencia-titulo" class="tituloSecundario">Transparência de <span class="destaqueTitulo">Resultados</span></h2>
+    <p class="subtituloTecnologia">Dados de coleta (exemplo ilustrativo).</p>
+    <div class="tabelaWrapper">
+      <table class="tabelaMateriais" aria-label="Tabela mensal de PETs e latas">
+        <thead>
+          <tr>
+            <th>Mês</th>
+            <th>PETs (un)</th>
+            <th>Latas (un)</th>
+            <th>CO₂ evitado (kg)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Jan</td><td>420</td><td>380</td><td>26.4</td></tr>
+          <tr><td>Fev</td><td>515</td><td>402</td><td>30.1</td></tr>
+          <tr><td>Mar</td><td>600</td><td>500</td><td>36.7</td></tr>
+          <tr><td>Abr</td><td>580</td><td>530</td><td>37.9</td></tr>
+          <tr><td>Mai</td><td>640</td><td>590</td><td>41.3</td></tr>
+          <tr><td>Jun</td><td>710</td><td>640</td><td>45.6</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO: Glossário (termos do projeto) ===== -->
+  <section id="glossario" class="secaoSustentavel" aria-labelledby="glossario-titulo">
+    <div class="caixaInformativa">
+      <h2 id="glossario-titulo" class="tituloCaixa">Glossário de Termos</h2>
+      <dl>
+        <dt>Economia Circular</dt><dd>Modelo que prioriza reuso, reciclagem e redução de resíduos.</dd>
+        <dt>Telemetria</dt><dd>Coleta e transmissão de dados operacionais para um painel.</dd>
+        <dt>Gamificação</dt><dd>Uso de mecânicas de jogo para engajar usuários.</dd>
+        <dt>ODS</dt><dd>Objetivos de Desenvolvimento Sustentável da ONU.</dd>
+        <dt>ESP32</dt><dd>Microcontrolador com conectividade Wi-Fi e Bluetooth.</dd>
+        <dt>Servo</dt><dd>Atuador que posiciona a porta de retenção conforme comando.</dd>
+        <dt>Display LCD</dt><dd>Tela de caracteres para informar status e pontuação.</dd>
+        <dt>QR Code</dt><dd>Código bidimensional para identificação/validação.</dd>
+        <dt>Cooperativa</dt><dd>Organização comunitária de reciclagem.</dd>
+        <dt>Resíduo Sólido</dt><dd>Material descartado que pode (ou não) ser reciclado.</dd>
+        <dt>CO₂ evitado</dt><dd>Estimativa de emissões reduzidas via reciclagem.</dd>
+        <dt>Coleta Seletiva</dt><dd>Sistema de separação de resíduos por tipo.</dd>
+        <dt>Prototipagem</dt><dd>Construção e teste de versões iniciais do projeto.</dd>
+        <dt>Firmware</dt><dd>Software embarcado no microcontrolador.</dd>
+        <dt>Dashboard</dt><dd>Painel web com indicadores e gráficos.</dd>
+        <dt>Metadados</dt><dd>Informações auxiliares sobre eventos/leituras.</dd>
+        <dt>ESP-IDF</dt><dd>Framework oficial para desenvolvimento no ESP32.</dd>
+        <dt>I²C</dt><dd>Protocolo de comunicação serial entre dispositivos.</dd>
+        <dt>Indução</dt><dd>Técnica para detecção de metais.</dd>
+        <dt>ODS 12</dt><dd>Consumo e produção responsáveis.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
 </body>
 </html>

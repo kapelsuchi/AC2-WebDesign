@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     background-color: white; 
@@ -446,4 +445,30 @@ body {
     .caixaInformativa {
         padding: 30px;
     }
+    
+    .cardRecurso { margin: 10px; }
+
+    #menuNav   { align-items: center; gap: 12px; flex-wrap: wrap; }
+    #menuLogin { align-items: center; gap: 12px; flex-wrap: wrap; }
+    .cardsRecursos { align-items: stretch; align-content: center; }
+
+    .tabelaWrapper{overflow-x:auto}
+    .tabelaMateriais{width:100%; border-collapse:collapse}
+    .tabelaMateriais th, .tabelaMateriais td{border:1px solid #eee; padding:10px; text-align:left}
+    .tabelaMateriais thead th{background:#f9f5f5}
+    .tabelaMateriais tbody tr:nth-child(even){background:#f7f3f1}
+
 }
+
+/* === patches globais (fora de media queries) === */
+.cardRecurso { margin: 10px; }                     /* garante Margin nos 20 cards em todas as larguras */
+#menuNav   { align-items: center; gap: 12px; flex-wrap: wrap; }
+#menuLogin { align-items: center; gap: 12px; flex-wrap: wrap; }
+.cardsRecursos { align-items: stretch; align-content: center; }  /* soma props Flexbox sem mudar o layout */
+
+/* tabelas globais (não só no mobile) */
+.tabelaWrapper{overflow-x:auto}
+.tabelaMateriais{width:100%; border-collapse:collapse}
+.tabelaMateriais th, .tabelaMateriais td{border:1px solid #eee; padding:10px; text-align:left}
+.tabelaMateriais thead th{background:#f9f5f5}
+.tabelaMateriais tbody tr:nth-child(even){background:#f7f3f1}

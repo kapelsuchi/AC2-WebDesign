@@ -1,68 +1,198 @@
+/* ---------- Layout geral da página de login ---------- */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background-color: white; 
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-
-.cabecalhoContainer {
-    margin-top: 2%;
-    width: 100%;
-}
-.menu {
-    display: flex;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
+main.formContainer {
+  flex: 1;
+  max-width: 960px;
+  margin: 60px auto;
+  padding: 32px;
 }
 
-#menuNav {
-    display: flex;
-    justify-content: center;
-    flex: 1; 
+/* ---------- Cartão do formulário ---------- */
+#loginSection, #cadastroSection {
+  background: linear-gradient(135deg, #f8f1f0 0%, #f4e8e6 100%);
+  border: 1px solid #e9d7d6;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+  padding: 28px;
 }
 
-#menuLogin {
-    display: flex;
-    margin-right: 2%;
+/* Espaço entre as seções quando alternar */
+#loginSection + #cadastroSection,
+#cadastroSection + #loginSection { margin-top: 20px; }
+
+/* ---------- Título/descrição das seções ---------- */
+#loginSection p, #cadastroSection p {
+  color: #8f987d;
+  margin: 0 0 16px 0;
+  font-weight: 500;
 }
 
-#menuNav li, #menuLogin li {
-    margin: 0 15px;
+/* ---------- Botões de alternância ---------- */
+.toggleButtons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
-#menuNav a, #menuLogin a {
-    color: #697159;
-    font-weight: bold;
-    display: block;
-    padding: 10px 5px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
+.toggleButtons button {
+  background: #697159;
+  color: #fff;
+  border: 2px solid #697159;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s ease, background-color .2s ease, color .2s ease;
 }
 
-#menuNav li a:hover, #menuLogin li a:hover {
-    background-color:  #deacab;
-    color: white;
+.toggleButtons button:hover { transform: translateY(-2px); }
+.toggleButtons button.ativo {
+  background: #deacab;
+  border-color: #deacab;
+  color: #fff;
 }
 
-.formContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* ---------- Formulários (Login/Cadastro) ---------- */
+.formularioLogin, .formularioCadastro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px 16px;
+  align-items: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.formularioLogin label,
+.formularioCadastro label {
+  color: #697159;
+  font-weight: 700;
 }
 
-p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 10px;
+.formularioLogin input[type="email"],
+.formularioLogin input[type="password"],
+.formularioCadastro input[type="text"],
+.formularioCadastro input[type="email"],
+.formularioCadastro input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #f2e0e0;
+  border-radius: 10px;
+  color: #697159;
+  background: #fff;
+  outline: none;
+  transition: box-shadow .2s ease, border-color .2s ease;
 }
 
-label {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    margin-bottom: 5px;
+.formularioLogin input:focus,
+.formularioCadastro input:focus {
+  border-color: #697159;
+  box-shadow: 0 0 0 3px rgba(105,113,89,.15);
+}
+
+/* Botão submit em linha inteira */
+.formularioLogin input[type="submit"],
+.formularioCadastro input[type="submit"] {
+  grid-column: 1 / -1;
+  justify-self: end;
+  background: #697159;
+  color: #fff;
+  border: 2px solid #697159;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .15s ease, background-color .2s ease, color .2s ease;
+}
+.formularioLogin input[type="submit"]:hover,
+.formularioCadastro input[type="submit"]:hover {
+  transform: translateY(-1px);
+  background: #555d49;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 720px) {
+  main.formContainer { padding: 20px; margin: 40px auto; }
+  .formularioLogin, .formularioCadastro {
+    grid-template-columns: 1fr;
+  }
+  .formularioLogin input[type="submit"],
+  .formularioCadastro input[type="submit"] {
+    justify-self: stretch;
+  }
+}
+
+/* ==================== DARK THEME — idêntico ao index ==================== */
+body.tema-escuro {
+  background: #0d0d0d; /* fundo preto total */
+  color: #e0e0e0;
+}
+
+/* Header preto */
+body.tema-escuro .cabecalhoContainer {
+  background: #0d0d0d !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Cartão azul-acinzentado igual ao index */
+body.tema-escuro #loginSection,
+body.tema-escuro #cadastroSection {
+  background: linear-gradient(145deg, #1e2835, #253241);
+  border: 1px solid #2f3f52;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+}
+
+/* Textos */
+body.tema-escuro #loginSection p,
+body.tema-escuro #cadastroSection p {
+  color: #cfd8dc;
+}
+
+/* Labels verdes */
+body.tema-escuro .formularioLogin label,
+body.tema-escuro .formularioCadastro label {
+  color: #9fae8a;
+}
+
+/* Inputs azul-acinzentados */
+body.tema-escuro input[type="email"],
+body.tema-escuro input[type="password"],
+body.tema-escuro input[type="text"] {
+  background: #1a2533;
+  border: 1px solid #324557;
+  color: #f5f5f5;
+  border-radius: 8px;
+}
+body.tema-escuro input[type="email"]:focus,
+body.tema-escuro input[type="password"]:focus,
+body.tema-escuro input[type="text"]:focus {
+  border-color: #deacab;
+  box-shadow: 0 0 0 3px rgba(222,172,171,0.35);
+}
+
+/* Botões (verde/rosé do tema) */
+body.tema-escuro .toggleButtons button {
+  background: #697159;
+  border-color: #697159;
+  color: #fff;
+}
+body.tema-escuro .toggleButtons button.ativo {
+  background: #deacab;
+  border-color: #deacab;
+  color: #fff;
+}
+
+/* Botão submit harmonizado */
+body.tema-escuro input[type="submit"] {
+  background: #697159;
+  border-color: #697159;
+  color: #fff;
+}
+body.tema-escuro input[type="submit"]:hover {
+  background: #555d49;
 }
