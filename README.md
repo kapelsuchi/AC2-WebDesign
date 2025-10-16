@@ -29,18 +29,18 @@ A proposta é oferecer uma interface simples e informativa que ajude os usuário
 
 ## 📂 Estrutura do Projeto
 
-```
 📁 AC2/
  ├── index.html
  ├── login.html
+ ├── sobrenos.html  
  ├── css/
  │    ├── style.css
- │    └── login.css
+ │    ├── login.css
+ │    └── sobrenos.css  
  ├── js/
  │    ├── script.js
  │    └── login.js
  └── README.md
-```
 
 ## 🚀 Como Executar
 
