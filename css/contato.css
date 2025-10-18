@@ -57,6 +57,7 @@ body {
     align-items: flex-start; 
     gap: 25px;
     margin: 40px 90px;
+    flex-direction: column;
 }
 
 .contatoContainer {
@@ -68,6 +69,7 @@ body {
     border-radius: 16px;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-self: center;
 
 }
 
@@ -120,9 +122,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 16px; 
-    justify-content: flex-end; 
     margin: 0;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .blocos h1 {
@@ -142,7 +144,7 @@ body {
 .bloco_dois,
 .bloco_tres,
 .bloco_quatro {
-        font-size: 20px;
+    font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #697159;
     display: block;
@@ -178,8 +180,8 @@ body {
 }
 
 .icone_img {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
 }
 
