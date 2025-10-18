@@ -12,27 +12,23 @@
 </head>
 
 <body>
-  <!-- Cabeçalho / Navegação -->
-  <header class="cabecalhoContainer" role="banner">
-    <div>
-      <nav class="menu" aria-label="Principal">
-        <ul id="menuNav">
-          <li><a href="#heroIntroducao">Home</a></li>
-          <li><a href="#ods">ODSs</a></li>
-          <li><a href="#sobremaquina">Sobre a Máquina</a></li>
-          <li><a href="#tecnologiaTransforma">Tecnologia</a></li>
-          <li><a href="#parceiros">Parceiros</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-        <ul id="menuLogin">
-          <li><a href="login.html">Login</a></li>
-          <li><a href="#perfil">Meu perfil</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+ <header class="cabecalhoContainer">
+        <div>
+            <nav class="menu">
+                <ul id="menuNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ods.html">ODSs</a></li>
+                    <li><a href="sobremaquina.html">Sobre a Máquina</a></li>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <ul id="menuLogin">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Meu perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
   <!-- Hero -->
   <section id="heroIntroducao" class="secaoHero">
@@ -50,35 +46,6 @@
     </div>
   </section>
 
-  <!-- ODSs -->
-  <section id="ods" class="secaoTecnologia" aria-labelledby="ods-titulo">
-
-    <h2 id="ods-titulo" class="tituloSecundario">ODSs que <span class="destaqueTitulo">Apoiamos</span></h2>
-    <p class="subtituloTecnologia">Nosso projeto se alinha às ODS 11, 12 e 13 — inspirando consumo responsável, cidades sustentáveis e ação climática.</p>
-    <div class="cardsRecursos">
-
-      <article class="cardRecurso"><div class="iconeCard">11</div><h3 class="tituloCard">ODS 11</h3><p class="textoCard">Cidades e comunidades sustentáveis.</p></article>
-      <article class="cardRecurso"><div class="iconeCard">12</div><h3 class="tituloCard">ODS 12</h3><p class="textoCard">Consumo e produção responsáveis.</p></article>
-      <article class="cardRecurso"><div class="iconeCard">13</div><h3 class="tituloCard">ODS 13</h3><p class="textoCard">Ação contra a mudança global do clima.</p></article>
-    </div>
-  </section>
-
-  <!-- Sobre a Máquina / Passos -->
-  <section id="sobremaquina" class="secaoSustentavel" aria-labelledby="sobre-titulo">
-
-    <div class="caixaInformativa">
-
-      <h2 id="sobre-titulo" class="tituloCaixa">Como a máquina funciona</h2>
-      <p class="textoCaixa">Do reconhecimento do material ao acúmulo de pontos — tudo pensado para facilitar a reciclagem no dia a dia.</p>
-      <ol class="listaPassos">
-        <li class="passo reveal">Identificação do material (PET/Alumínio) com sensores IR e detecção de metal.</li>
-        <li class="passo reveal">Validação e abertura de porta controlada por servo.</li>
-        <li class="passo reveal">Pontuação imediata e exibição no display LCD.</li>
-        <li class="passo reveal">Geração de QR Code/ID para resgate de benefícios.</li>
-        <li class="passo reveal">Sincronização opcional com o painel web (modo offline suportado).</li>
-      </ol>
-    </div>
-  </section>
 
   <!-- Tecnologia: 20 Cards com Content + Padding + Border + Margin -->
   <section id="tecnologiaTransforma" class="secaoTecnologia" aria-labelledby="tec-titulo">
@@ -157,21 +124,6 @@
     </div>
   </section>
 
-  <!-- Ranking / Gamificação -->
-  <section id="ranking" class="secaoSustentavel" aria-labelledby="ranking-titulo">
-    <div class="caixaInformativa">
-      <h2 id="ranking-titulo" class="tituloCaixa">Ranking de Pontos</h2>
-      <p class="textoCaixa">Top usuários da semana. Conquiste badges especiais ao atingir metas.</p>
-      <ol class="listaRanking">
-        <li class="reveal">Ana — 120 pts</li>
-        <li class="reveal">Lucas — 105 pts</li>
-        <li class="reveal">Mariana — 98 pts</li>
-        <li class="reveal">Pedro — 92 pts</li>
-        <li class="reveal">Sofia — 81 pts</li>
-      </ol>
-    </div>
-  </section>
-
   <!-- Depoimentos -->
   <section id="depoimentos" class="secaoTecnologia" aria-labelledby="depoimentos-titulo">
     <h2 id="depoimentos-titulo" class="tituloSecundario">O que as pessoas <span class="destaqueTitulo">dizem</span></h2>
@@ -213,71 +165,6 @@
     </div>
   </section>
 
-  <!-- Cronograma / Roadmap -->
-  <section id="roadmap" class="secaoSustentavel" aria-labelledby="roadmap-titulo">
-    <div class="caixaInformativa">
-      <h2 id="roadmap-titulo" class="tituloCaixa">Cronograma de Entrega</h2>
-      <p class="textoCaixa">Planejamento de marcos: protótipo, testes e implantação.</p>
-      <ul class="listaPassos">
-        <li class="reveal">Fase 1 — Protótipo funcional (sensores + LCD + pontos)</li>
-        <li class="reveal">Fase 2 — Interface touchscreen + QR Code</li>
-        <li class="reveal">Fase 3 — Dashboard e relatórios</li>
-        <li class="reveal">Fase 4 — Parcerias e incentivos</li>
-        <li class="reveal">Fase 5 — Implantação ampliada</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Perguntas Frequentes (FAQ) -->
-  <section id="faq" class="secaoTecnologia" aria-labelledby="faq-titulo">
-    <h2 id="faq-titulo" class="tituloSecundario">Perguntas <span class="destaqueTitulo">Frequentes</span></h2>
-    <p class="subtituloTecnologia">Tire dúvidas sobre materiais, pontos e funcionamento.</p>
-    <div class="faqLista">
-      <details class="faqItem">
-        <summary>Quais materiais a máquina aceita?</summary>
-        <p>PETs e latas de alumínio. Garrafas e latas devem estar limpas.</p>
-      </details>
-      <details class="faqItem">
-        <summary>Como os pontos são calculados?</summary>
-        <p>Por item depositado; campanhas podem dar bônus temporários.</p>
-      </details>
-      <details class="faqItem">
-        <summary>Preciso de internet para usar?</summary>
-        <p>Não. Há modo offline com sincronização posterior.</p>
-      </details>
-      <details class="faqItem">
-        <summary>Como resgatar meus pontos?</summary>
-        <p>Use o QR Code/ID emitido pela máquina para resgatar benefícios.</p>
-      </details>
-      <details class="faqItem">
-        <summary>Onde vejo meus relatórios?</summary>
-        <p>Na área do usuário, com métricas básicas e histórico.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- Formulário de Contato -->
-  <section id="contato" class="secaoSustentavel" aria-labelledby="contato-titulo">
-    <div class="caixaInformativa">
-      <h2 id="contato-titulo" class="tituloCaixa">Fale Conosco</h2>
-      <p class="textoCaixa">Dúvidas e sugestões são bem-vindas. Retornamos em breve!</p>
-      <form id="formContato" novalidate>
-        <div class="grupoCampo">
-          <label for="nome">Nome</label>
-          <input id="nome" name="nome" required placeholder="Seu nome completo" />
-        </div>
-        <div class="grupoCampo">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="seu@email.com"/>
-        </div>
-        <div class="grupoCampo">
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Escreva sua mensagem"></textarea>
-        </div>
-        <button type="submit" class="botaoPrimario">Enviar</button>
-      </form>
-    </div>
-  </section>
 
   <!-- Acessibilidade -->
   <section id="acessibilidade" class="secaoTecnologia" aria-labelledby="acessibilidade-titulo">
@@ -304,11 +191,6 @@
     </div>
   </section>
 
-  <!-- Rodapé -->
-  <footer class="rodape" role="contentinfo">
-    <p>© 2025 Recycle — Projeto acadêmico. Todos os direitos reservados.</p>
-    <p><a href="#" id="btnPontos">Ver meus pontos</a></p>
-  </footer>
 
   <!-- Botões flutuantes do seu JS -->
   <button id="botaoTema" class="botaoFlutuante" title="Alternar tema" style="bottom: 100px; right: 20px;">🌓</button>
@@ -412,87 +294,6 @@
       <li class="reveal">Acompanhe seus pontos na área de usuário do dashboard.</li>
       <li class="reveal">Em caso de erro, utilize o botão de ajuda ou o formulário de contato.</li>
     </ol>
-  </section>
-
-  <!-- ===== SEÇÃO: Pontos de Coleta Parceiros (endereços) ===== -->
-  <section id="pontos-coleta" class="secaoSustentavel" aria-labelledby="pontos-titulo">
-    <div class="caixaInformativa">
-      <h2 id="pontos-titulo" class="tituloCaixa">Pontos de Coleta Parceiros</h2>
-      <p class="textoCaixa">Locais próximos para entregar materiais quando a máquina estiver em manutenção ou em horários alternativos.</p>
-      <ul class="listaAcessibilidade">
-        <li class="reveal">
-          <strong>Cooperativa Verde Vida</strong><br />
-          <address>Rua das Palmeiras, 120 — Centro</address>
-        </li>
-        <li class="reveal">
-          <strong>Eco Ponto Universitário</strong><br />
-          <address>Av. do Campus, 500 — Bloco B</address>
-        </li>
-        <li class="reveal">
-          <strong>Associação Recicla+</strong><br />
-          <address>Rua das Acácias, 78 — Bairro Norte</address>
-        </li>
-        <li class="reveal">
-          <strong>Coleta Seletiva Municipal</strong><br />
-          <address>Av. Ambiental, 2500 — Distrito Industrial</address>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ===== SEÇÃO: Transparência (tabela de resultados) ===== -->
-  <section id="transparencia" class="secaoTecnologia" aria-labelledby="transparencia-titulo">
-    <h2 id="transparencia-titulo" class="tituloSecundario">Transparência de <span class="destaqueTitulo">Resultados</span></h2>
-    <p class="subtituloTecnologia">Dados de coleta (exemplo ilustrativo).</p>
-    <div class="tabelaWrapper">
-      <table class="tabelaMateriais" aria-label="Tabela mensal de PETs e latas">
-        <thead>
-          <tr>
-            <th>Mês</th>
-            <th>PETs (un)</th>
-            <th>Latas (un)</th>
-            <th>CO₂ evitado (kg)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Jan</td><td>420</td><td>380</td><td>26.4</td></tr>
-          <tr><td>Fev</td><td>515</td><td>402</td><td>30.1</td></tr>
-          <tr><td>Mar</td><td>600</td><td>500</td><td>36.7</td></tr>
-          <tr><td>Abr</td><td>580</td><td>530</td><td>37.9</td></tr>
-          <tr><td>Mai</td><td>640</td><td>590</td><td>41.3</td></tr>
-          <tr><td>Jun</td><td>710</td><td>640</td><td>45.6</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- ===== SEÇÃO: Glossário (termos do projeto) ===== -->
-  <section id="glossario" class="secaoSustentavel" aria-labelledby="glossario-titulo">
-    <div class="caixaInformativa">
-      <h2 id="glossario-titulo" class="tituloCaixa">Glossário de Termos</h2>
-      <dl>
-        <dt>Economia Circular</dt><dd>Modelo que prioriza reuso, reciclagem e redução de resíduos.</dd>
-        <dt>Telemetria</dt><dd>Coleta e transmissão de dados operacionais para um painel.</dd>
-        <dt>Gamificação</dt><dd>Uso de mecânicas de jogo para engajar usuários.</dd>
-        <dt>ODS</dt><dd>Objetivos de Desenvolvimento Sustentável da ONU.</dd>
-        <dt>ESP32</dt><dd>Microcontrolador com conectividade Wi-Fi e Bluetooth.</dd>
-        <dt>Servo</dt><dd>Atuador que posiciona a porta de retenção conforme comando.</dd>
-        <dt>Display LCD</dt><dd>Tela de caracteres para informar status e pontuação.</dd>
-        <dt>QR Code</dt><dd>Código bidimensional para identificação/validação.</dd>
-        <dt>Cooperativa</dt><dd>Organização comunitária de reciclagem.</dd>
-        <dt>Resíduo Sólido</dt><dd>Material descartado que pode (ou não) ser reciclado.</dd>
-        <dt>CO₂ evitado</dt><dd>Estimativa de emissões reduzidas via reciclagem.</dd>
-        <dt>Coleta Seletiva</dt><dd>Sistema de separação de resíduos por tipo.</dd>
-        <dt>Prototipagem</dt><dd>Construção e teste de versões iniciais do projeto.</dd>
-        <dt>Firmware</dt><dd>Software embarcado no microcontrolador.</dd>
-        <dt>Dashboard</dt><dd>Painel web com indicadores e gráficos.</dd>
-        <dt>Metadados</dt><dd>Informações auxiliares sobre eventos/leituras.</dd>
-        <dt>ESP-IDF</dt><dd>Framework oficial para desenvolvimento no ESP32.</dd>
-        <dt>I²C</dt><dd>Protocolo de comunicação serial entre dispositivos.</dd>
-        <dt>Indução</dt><dd>Técnica para detecção de metais.</dd>
-        <dt>ODS 12</dt><dd>Consumo e produção responsáveis.</dd>
-      </dl>
-    </div>
   </section>
 
   <!-- Scripts -->

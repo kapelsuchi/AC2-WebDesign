@@ -28,6 +28,7 @@ main.formContainer {
 
 /* ---------- Título/descrição das seções ---------- */
 #loginSection p, #cadastroSection p {
+  justify-self: center;
   color: #8f987d;
   margin: 0 0 16px 0;
   font-weight: 500;
@@ -78,7 +79,6 @@ main.formContainer {
 .formularioCadastro input[type="text"],
 .formularioCadastro input[type="email"],
 .formularioCadastro input[type="password"] {
-  width: 100%;
   padding: 10px 12px;
   border: 1px solid #f2e0e0;
   border-radius: 10px;
@@ -98,7 +98,7 @@ main.formContainer {
 .formularioLogin input[type="submit"],
 .formularioCadastro input[type="submit"] {
   grid-column: 1 / -1;
-  justify-self: end;
+  margin-top: 2%;
   background: #697159;
   color: #fff;
   border: 2px solid #697159;
