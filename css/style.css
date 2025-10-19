@@ -44,40 +44,65 @@ body {
 }
 
 .rodape {
-    background-color:#8f987d;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    font-size: 14px;
-    color: #f7f3f1; 
-    height: 20%;
+  background-color: #8f987d;
+  color: #f7f3f1;
+  padding: 20px 40px;
+  margin-top: 40px;
+  font-size: 14px;
 }
 
-.rodape a:hover {
-    background-color:  #deacab;
-    color: white;
-    font-weight: bold;
-    padding: 10px 5px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-
+.rodape-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
-.rodape img {
-    height: 40px;
-    display: flex;
-    align-items: flex-end;
-    flex-flow: row;
+.linksRodape {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
 }
 
-.rodape a {
-    color: #f7f3f1; 
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: flex-start;
-    margin-left: 2%;
+.linksRodape a {
+  color: #f7f3f1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 5px 8px;
+  border-radius: 8px;
 }
+
+.linksRodape a:hover {
+  background-color: #deacab;
+  color: white;
+}
+
+.redesSociaisRodape {
+  display: flex;
+  gap: 15px;
+}
+
+.redesSociaisRodape img {
+  height: 35px;
+  width: 35px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redesSociaisRodape img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.rodape p {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
 
 .secaoHero {
     display: flex;
