@@ -1,3 +1,7 @@
+.body {
+    overflow-x: hidden;
+}
+
 .cabecalhoContainer {
     margin-top: 2%;
     width: 100%;
