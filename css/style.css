@@ -43,6 +43,42 @@ body {
     color: white;
 }
 
+.rodape {
+    background-color:#8f987d;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #f7f3f1; 
+    height: 20%;
+}
+
+.rodape a:hover {
+    background-color:  #deacab;
+    color: white;
+    font-weight: bold;
+    padding: 10px 5px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+
+}
+
+.rodape img {
+    height: 40px;
+    display: flex;
+    align-items: flex-end;
+    flex-flow: row;
+}
+
+.rodape a {
+    color: #f7f3f1; 
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 2%;
+}
+
 .secaoHero {
     display: flex;
     align-items: center;

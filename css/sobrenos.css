@@ -12,18 +12,17 @@
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
   background:var(--bg);
   color:#2f3a2a;
   -webkit-font-smoothing:antialiased;
 }
 
-/* container */
-.container{
-  max-width:var(--container);
-  margin:0 auto;
-  padding:28px 26px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: white; 
 }
+
 
 .cabecalhoContainer {
     margin-top: 2%;
@@ -64,9 +63,32 @@ body{
     color: white;
 }
 
+/* container */
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:28px 26px;
+}
+
+/* header */
+.site-header{
+  background:transparent;
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom:1px solid rgba(0,0,0,0.03);
+  backdrop-filter: blur(4px);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
 
 /* logo */
 .logo{
+  font-family: "Montserrat", sans-serif;
   color:var(--accent);
   font-weight:700;
   text-decoration:none;
@@ -157,6 +179,7 @@ body{
 /* right content */
 .card-right h3{
   margin:0 0 8px 0;
+  font-family: "Montserrat", sans-serif;
   color:var(--accent);
   font-size:18px;
 }
@@ -183,6 +206,7 @@ body{
 }
 .history-card h2{
   margin:0 0 14px 0;
+  font-family: "Montserrat", sans-serif;
   color:var(--accent);
   font-size:24px;
 }
@@ -213,4 +237,30 @@ body{
   .card-left{ width:56px; min-width:56px; }
   .ghost-icon{ width:28px; height:28px; }
   .history-card h2{ font-size:20px; }
+}
+
+.card {
+  position: relative;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(109, 129, 64, 0.2);
+  background-color: #fdfdf9;
+}
+
+.card:hover h3 {
+  color: #5c6d32;
+  transition: color 0.3s ease;
+}
+
+.card:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  border: 1px solid rgba(109, 129, 64, 0.25);
+  pointer-events: none;
 }

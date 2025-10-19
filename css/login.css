@@ -114,6 +114,68 @@ main.formContainer {
   background: #555d49;
 }
 
+.rodape {
+  background-color: #8f987d;
+  color: #f7f3f1;
+  padding: 20px 40px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.rodape-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.linksRodape {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.linksRodape a {
+  color: #f7f3f1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+
+.linksRodape a:hover {
+  background-color: #deacab;
+  color: white;
+}
+
+.redesSociaisRodape {
+  display: flex;
+  gap: 15px;
+}
+
+.redesSociaisRodape img {
+  height: 35px;
+  width: 35px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redesSociaisRodape img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.rodape p {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+
+
 /* ---------- Responsivo ---------- */
 @media (max-width: 720px) {
   main.formContainer { padding: 20px; margin: 40px auto; }
