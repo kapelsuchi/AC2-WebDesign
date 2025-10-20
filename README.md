@@ -29,20 +29,28 @@ A proposta é oferecer uma interface simples e informativa que ajude os usuário
 
 ## 📂 Estrutura do Projeto
 
- ```
-📁AC2/
-├── index.html
-├── login.html
-├── sobrenos.html
-├── css/
-│   ├── style.css
-│   ├── login.css
-│   └── sobrenos.css
-├── js/
-│   ├── script.js
-│   └── login.js
-└── README.md
- ```
+```
+📁 AC2/
+ ├── index.html
+ ├── login.html
+ ├── contato.html
+ ├── ods.html
+ ├── sobrenos.html
+ ├── css/
+ │    ├── style.css
+ |    ├── sobrenos.css
+      ├── contato.css
+      ├── ods.css
+      ├── reset.css
+ │    └── login.css
+ ├── js/
+ │    ├── script.js
+      ├── contato.js
+      ├── sobrenos.js
+      ├── ods.js
+ │    └── login.js
+ └── README.md
+```
 
 ## 🚀 Como Executar
 
