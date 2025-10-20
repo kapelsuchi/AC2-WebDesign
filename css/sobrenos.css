@@ -1,7 +1,7 @@
 :root{
-  --bg: #f7f6f1;        /* fundo geral */
+  --bg: #f7f6f1;        
   --card-bg: #ffffff;
-  --accent: #6d8140;    /* verde oliva */
+  --accent: #6d8140;    
   --muted: #7b8564;
   --soft: #eef3e2;
   --radius: 18px;
@@ -57,16 +57,12 @@ body{
     color: #e0e0e0;
 }
 
-/* container */
 .container{
   max-width:var(--container);
   margin:0 auto;
   padding:28px 26px;
 }
 
-
-
-/* nav */
 .main-nav{
   display:flex;
   gap:18px;
@@ -86,7 +82,6 @@ body{
   box-shadow:0 2px 6px rgba(109,129,64,0.18);
 }
 
-/* auth */
 .auth{ display:flex; gap:10px; align-items:center; }
 .btn{
   border-radius:14px;
@@ -115,7 +110,6 @@ body{
   margin-bottom:36px;
 }
 
-/* card */
 .card{
   display:flex;
   background:var(--card-bg);
@@ -128,9 +122,6 @@ body{
   min-height:120px;
 }
 
-
-
-/* left decorative column w/ ghost icon */
 .card-left{
   width:72px;
   min-width:72px;
@@ -148,7 +139,6 @@ body{
   stroke-linejoin:round;
 }
 
-/* right content */
 .card-right h3{
   margin:0 0 8px 0;
   font-family: "Montserrat", sans-serif;
@@ -221,8 +211,6 @@ body{
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-
-/* ==================== DARK THEME ==================== */
 body.tema-escuro {
     background: #121212;
     color: #e0e0e0;
@@ -236,8 +224,6 @@ body.tema-escuro {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-
-/* Header */
 body.tema-escuro .cabecalhoContainer {
     background: #121212 !important;
 }
@@ -253,12 +239,11 @@ body.tema-escuro #menuLogin a:hover {
     color: white;
 }
 
-/* Main content */
 body.tema-escuro .container {
     background: #121212;
 }
 
-/* Cards */
+
 body.tema-escuro .card {
     background: #1e1e1e;
     border: 2px solid #333;
@@ -278,7 +263,7 @@ body.tema-escuro .card-right p {
     color: #cfd8dc;
 }
 
-/* History card */
+
 body.tema-escuro .history-card {
     background: #1e1e1e;
     border: 1px solid #333;
@@ -298,7 +283,6 @@ body.tema-escuro .history-body p {
     color: #cfd8dc;
 }
 
-/* Navigation */
 body.tema-escuro .main-nav a {
     color: #cfd8dc;
 }
@@ -308,7 +292,6 @@ body.tema-escuro .main-nav a.active {
     color: #fff;
 }
 
-/* Buttons */
 body.tema-escuro .btn-ghost {
     background: #333;
     color: #e0e0e0;
@@ -320,12 +303,11 @@ body.tema-escuro .btn-primary {
     color: #fff;
 }
 
-/* Footer */
+
 body.tema-escuro .site-footer {
     color: #cfd8dc;
 }
 
-/* Card borders */
 body.tema-escuro .card::before,
 body.tema-escuro .history-card::before {
     border-color: #444;
@@ -336,7 +318,7 @@ body.tema-escuro .history-card:hover::before {
     border-color: rgba(222, 172, 171, 0.5);
 }
 
-/* responsive */
+
 @media (max-width: 900px){
   .cards{ grid-template-columns: 1fr; }
   .header-inner{ flex-direction:column; align-items:flex-start; gap:12px; }
@@ -351,12 +333,10 @@ body.tema-escuro .history-card:hover::before {
 }
 
 @media (max-width: 320px) {
-  /* Ajusta espaçamento geral */
   .container {
     padding: 14px;
   }
 
-  /* Cabeçalho compacto */
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -389,7 +369,7 @@ body.tema-escuro .history-card:hover::before {
     padding: 6px 10px;
   }
 
-  /* Cards em coluna única, com menos espaçamento */
+  
   .cards {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -421,7 +401,6 @@ body.tema-escuro .history-card:hover::before {
     font-size: 13px;
   }
 
-  /* História e texto */
   .history-card {
     padding: 18px;
   }
@@ -435,7 +414,6 @@ body.tema-escuro .history-card:hover::before {
     line-height: 1.6;
   }
 
-  /* Rodapé menor */
   .site-footer {
     font-size: 12px;
     padding: 20px 0;

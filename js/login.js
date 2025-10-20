@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginSection = document.getElementById("loginSection");
     const cadastroSection = document.getElementById("cadastroSection");
 
-    // Exibe login por padrão
     loginSection.style.display = "block";
     cadastroSection.style.display = "none";
 
@@ -23,12 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// === Tema + Tecla "T" + Voltar ao topo (login) ===
 (function () {
   const btnTema = document.getElementById('botaoTema');
   const temaSalvo = localStorage.getItem('temaRecycle');
 
-  // aplica tema salvo ou preferência do sistema
   if (temaSalvo === 'escuro' || (!temaSalvo && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.body.classList.add('tema-escuro');
     if (btnTema) btnTema.textContent = '☀️';
@@ -42,12 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (btnTema) btnTema.addEventListener('click', alternarTema);
 
-  // atalho de teclado "t"
   document.addEventListener('keydown', (e) => {
     if (e.key && e.key.toLowerCase() === 't') alternarTema();
   });
 
-  // botão voltar ao topo (mesma UX do index)
   const btnTopo = document.getElementById('botaoTopo');
   if (btnTopo) {
     const atualizaVisibilidade = () => {
@@ -61,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })();
 
-// Add success messages on form submit
 document.querySelector('.formularioLogin').addEventListener('submit', function(e) {
     e.preventDefault();
     showMessage('Login feito!', this);

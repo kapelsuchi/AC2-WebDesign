@@ -437,10 +437,6 @@ body.tema-escuro .linksRodape a:hover {
     color: white;
 }
 
-
-
-
-
 .digitando {
     border-right: 2px solid #0e4a27;
     animation: piscar 0.7s infinite;

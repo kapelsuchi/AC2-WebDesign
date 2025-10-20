@@ -67,7 +67,7 @@ body {
 .contatoContainer {
     max-width: 780px;
     width: 100%;
-    margin: 10px 0 40px 0px; /* diminua aqui para aproximar da esquerda */
+    margin: 10px 0 40px 0px;
     padding: 30px 25px;
     background: #f9f9f9;
     border-radius: 16px;
@@ -273,14 +273,12 @@ body {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* ==================== DARK THEME - CONTACT PAGE ==================== */
 body.tema-escuro {
     background: #121212;
     color: #e0e0e0;
     overflow-x: hidden;
 }
 
-/* Header */
 body.tema-escuro .cabecalhoContainer {
     background: #121212 !important;
 }
@@ -296,12 +294,10 @@ body.tema-escuro #menuLogin a:hover {
     color: white;
 }
 
-/* Title */
 body.tema-escuro #titulo {
     color: #e0e0e0;
 }
 
-/* Contact Form */
 body.tema-escuro .contatoContainer {
     background: #1e1e1e;
     border: 1px solid #333;
@@ -333,7 +329,6 @@ body.tema-escuro .formContato button:hover {
     background: #555d49;
 }
 
-/* Info Blocks */
 body.tema-escuro .bloco_um,
 body.tema-escuro .bloco_dois,
 body.tema-escuro .bloco_tres,
@@ -351,7 +346,6 @@ body.tema-escuro .bloco_quatro:hover {
     color: white;
 }
 
-/* Social Blocks */
 body.tema-escuro .bloco_social_um,
 body.tema-escuro .bloco_social_dois,
 body.tema-escuro .bloco_social_tres,
@@ -369,7 +363,6 @@ body.tema-escuro .bloco_social_quatro:hover {
     color: white;
 }
 
-/* Footer */
 body.tema-escuro .rodape {
     background: #1a2533;
     color: #e0e0e0;

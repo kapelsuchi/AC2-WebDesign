@@ -1,4 +1,4 @@
-/* ---------- Layout geral da página de login ---------- */
+
 body {
   background: #fff;
   min-height: 100vh;
@@ -13,7 +13,6 @@ main.formContainer {
   padding: 32px;
 }
 
-/* ---------- Cartão do formulário ---------- */
 #loginSection, #cadastroSection {
   background: linear-gradient(135deg, #f8f1f0 0%, #f4e8e6 100%);
   border: 1px solid #e9d7d6;
@@ -22,11 +21,9 @@ main.formContainer {
   padding: 28px;
 }
 
-/* Espaço entre as seções quando alternar */
 #loginSection + #cadastroSection,
 #cadastroSection + #loginSection { margin-top: 20px; }
 
-/* ---------- Título/descrição das seções ---------- */
 #loginSection p, #cadastroSection p {
   justify-self: center;
   color: #8f987d;
@@ -34,7 +31,6 @@ main.formContainer {
   font-weight: 500;
 }
 
-/* ---------- Botões de alternância ---------- */
 .toggleButtons {
   display: flex;
   justify-content: center;
@@ -60,7 +56,6 @@ main.formContainer {
   color: #fff;
 }
 
-/* ---------- Formulários (Login/Cadastro) ---------- */
 .formularioLogin, .formularioCadastro {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -94,7 +89,6 @@ main.formContainer {
   box-shadow: 0 0 0 3px rgba(105,113,89,.15);
 }
 
-/* Botão submit em linha inteira */
 .formularioLogin input[type="submit"],
 .formularioCadastro input[type="submit"] {
   grid-column: 1 / -1;
@@ -174,33 +168,17 @@ main.formContainer {
   margin-top: 10px;
 }
 
-
-
-/* ---------- Responsivo ---------- */
-@media (max-width: 720px) {
-  main.formContainer { padding: 20px; margin: 40px auto; }
-  .formularioLogin, .formularioCadastro {
-    grid-template-columns: 1fr;
-  }
-  .formularioLogin input[type="submit"],
-  .formularioCadastro input[type="submit"] {
-    justify-self: stretch;
-  }
-}
-
-/* ==================== DARK THEME — idêntico ao index ==================== */
 body.tema-escuro {
-  background: #0d0d0d; /* fundo preto total */
+  background: #0d0d0d; 
   color: #e0e0e0;
 }
 
-/* Header preto */
+
 body.tema-escuro .cabecalhoContainer {
   background: #0d0d0d !important;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Cartão azul-acinzentado igual ao index */
 body.tema-escuro #loginSection,
 body.tema-escuro #cadastroSection {
   background: linear-gradient(145deg, #1e2835, #253241);
@@ -209,19 +187,16 @@ body.tema-escuro #cadastroSection {
   box-shadow: 0 12px 28px rgba(0,0,0,0.6);
 }
 
-/* Textos */
 body.tema-escuro #loginSection p,
 body.tema-escuro #cadastroSection p {
   color: #cfd8dc;
 }
 
-/* Labels verdes */
 body.tema-escuro .formularioLogin label,
 body.tema-escuro .formularioCadastro label {
   color: #9fae8a;
 }
 
-/* Inputs azul-acinzentados */
 body.tema-escuro input[type="email"],
 body.tema-escuro input[type="password"],
 body.tema-escuro input[type="text"] {
@@ -237,7 +212,6 @@ body.tema-escuro input[type="text"]:focus {
   box-shadow: 0 0 0 3px rgba(222,172,171,0.35);
 }
 
-/* Botões (verde/rosé do tema) */
 body.tema-escuro .toggleButtons button {
   background: #697159;
   border-color: #697159;
@@ -249,7 +223,6 @@ body.tema-escuro .toggleButtons button.ativo {
   color: #fff;
 }
 
-/* Botão submit harmonizado */
 body.tema-escuro input[type="submit"] {
   background: #697159;
   border-color: #697159;
@@ -259,7 +232,6 @@ body.tema-escuro input[type="submit"]:hover {
   background: #555d49;
 }
 
-/* Footer */
 body.tema-escuro .rodape {
     background-color: #1a2533;
     color: #e0e0e0;

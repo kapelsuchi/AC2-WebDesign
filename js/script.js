@@ -1,13 +1,7 @@
-// js/script.js - FUNCIONALIDADES COMPLETAS
-
-// =============================================
-// 1. INICIALIZAÇÃO GERAL
-// =============================================
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 Recycle JS - Inicializando funcionalidades...');
     
-    // Inicializar todas as funcionalidades
     inicializarTema();
     inicializarBotaoTopo();
     inicializarTypewriter();
@@ -15,19 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
     inicializarHeaderDinamico();
     inicializarAnimacoesScroll();
     
-    // Adicionar eventos aos botões existentes
     inicializarBotoes();
 });
 
-// =============================================
-// 2. MODO ESCURO/CLARO
-// =============================================
 
 function inicializarTema() {
     const botaoTema = document.getElementById('botaoTema');
     const temaSalvo = localStorage.getItem('temaRecycle');
     
-    // Aplicar tema salvo ou detectar preferência do sistema
     if (temaSalvo === 'escuro' || (!temaSalvo && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         ativarModoEscuro();
     }
@@ -57,10 +46,6 @@ function desativarModoEscuro() {
     document.getElementById('botaoTema').textContent = '🌓';
 }
 
-// =============================================
-// 3. BOTÃO VOLTAR AO TOPO
-// =============================================
-
 function inicializarBotaoTopo() {
     const botaoTopo = document.getElementById('botaoTopo');
     
@@ -79,7 +64,6 @@ function inicializarBotaoTopo() {
         }
     });
     
-    // Evento de clique
     botaoTopo.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
@@ -88,9 +72,6 @@ function inicializarBotaoTopo() {
     });
 }
 
-// =============================================
-// 4. EFEITO TYPEWRITER (ESCREVENDO)
-// =============================================
 
 function inicializarTypewriter() {
     const textosParaDigitar = [
@@ -132,7 +113,6 @@ function iniciarTypewriter(config) {
     const elemento = config.elemento;
     const textoOriginal = elemento.textContent;
     
-    // Salvar texto original e limpar
     elemento.setAttribute('data-texto-original', textoOriginal);
     elemento.textContent = '';
     elemento.classList.add('digitando');
@@ -290,7 +270,6 @@ function estaNaTela(elemento) {
 
 console.log('✅ Todas as funcionalidades JavaScript foram carregadas!');
 
-// [extra] Tecla "t" alterna o tema (claro/escuro) e salva a preferência
 document.addEventListener('keydown', (e) => {
   if (e.key.toLowerCase() === 't') {
     const b = document.body;
@@ -299,6 +278,6 @@ document.addEventListener('keydown', (e) => {
     console.log('Tema:', escuro ? 'escuro' : 'claro');
   }
 });
-// [extra] Acessibilidade: "Enter" ativa o link de pontos (#btnPontos)
+
 const p = document.getElementById('btnPontos');
 if (p) p.addEventListener('keydown', (e) => { if (e.key === 'Enter') p.click(); });
