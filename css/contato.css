@@ -241,3 +241,136 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 40px;
 }
+
+.botaoFlutuante {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botaoFlutuante:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.tema-escuro .botaoFlutuante {
+    background: linear-gradient(135deg, #3b4a5a, #2c3e50);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* ==================== DARK THEME - CONTACT PAGE ==================== */
+body.tema-escuro {
+    background: #121212;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+/* Header */
+body.tema-escuro .cabecalhoContainer {
+    background: #121212 !important;
+}
+
+body.tema-escuro #menuNav a,
+body.tema-escuro #menuLogin a {
+    color: #e0e0e0;
+}
+
+body.tema-escuro #menuNav a:hover,
+body.tema-escuro #menuLogin a:hover {
+    background-color: #deacab;
+    color: white;
+}
+
+/* Title */
+body.tema-escuro #titulo {
+    color: #e0e0e0;
+}
+
+/* Contact Form */
+body.tema-escuro .contatoContainer {
+    background: #1e1e1e;
+    border: 1px solid #333;
+}
+
+body.tema-escuro .formContato label {
+    color: #9fae8a;
+}
+
+body.tema-escuro .formContato input,
+body.tema-escuro .formContato textarea {
+    background: #2d2d2d;
+    border: 1px solid #444;
+    color: #e0e0e0;
+}
+
+body.tema-escuro .formContato input:focus,
+body.tema-escuro .formContato textarea:focus {
+    border-color: #deacab;
+    outline: none;
+}
+
+body.tema-escuro .formContato button {
+    background: #697159;
+    color: #fff;
+}
+
+body.tema-escuro .formContato button:hover {
+    background: #555d49;
+}
+
+/* Info Blocks */
+body.tema-escuro .bloco_um,
+body.tema-escuro .bloco_dois,
+body.tema-escuro .bloco_tres,
+body.tema-escuro .bloco_quatro {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #333;
+}
+
+body.tema-escuro .bloco_um:hover,
+body.tema-escuro .bloco_dois:hover,
+body.tema-escuro .bloco_tres:hover,
+body.tema-escuro .bloco_quatro:hover {
+    background: #deacab;
+    color: white;
+}
+
+/* Social Blocks */
+body.tema-escuro .bloco_social_um,
+body.tema-escuro .bloco_social_dois,
+body.tema-escuro .bloco_social_tres,
+body.tema-escuro .bloco_social_quatro {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #333;
+}
+
+body.tema-escuro .bloco_social_um:hover,
+body.tema-escuro .bloco_social_dois:hover,
+body.tema-escuro .bloco_social_tres:hover,
+body.tema-escuro .bloco_social_quatro:hover {
+    background: #deacab;
+    color: white;
+}
+
+/* Footer */
+body.tema-escuro .rodape {
+    background: #1a2533;
+    color: #e0e0e0;
+}

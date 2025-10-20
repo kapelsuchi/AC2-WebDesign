@@ -198,12 +198,142 @@ body{
   line-height:1.75;
 }
 
-/* footer */
-.site-footer{
-  padding:28px 0;
-  text-align:center;
-  color:var(--muted);
-  font-size:13px;
+.botaoFlutuante {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botaoFlutuante:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+
+/* ==================== DARK THEME ==================== */
+body.tema-escuro {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.tema-escuro .botaoFlutuante {
+    background: linear-gradient(135deg, #3b4a5a, #2c3e50);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+
+/* Header */
+body.tema-escuro .cabecalhoContainer {
+    background: #121212 !important;
+}
+
+body.tema-escuro #menuNav a,
+body.tema-escuro #menuLogin a {
+    color: #e0e0e0;
+}
+
+body.tema-escuro #menuNav a:hover,
+body.tema-escuro #menuLogin a:hover {
+    background-color: #deacab;
+    color: white;
+}
+
+/* Main content */
+body.tema-escuro .container {
+    background: #121212;
+}
+
+/* Cards */
+body.tema-escuro .card {
+    background: #1e1e1e;
+    border: 2px solid #333;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.tema-escuro .card:hover {
+    background: #deacab;
+    box-shadow: 0 12px 24px rgba(222, 172, 171, 0.3);
+}
+
+body.tema-escuro .card-right h3 {
+    color: #9fae8a;
+}
+
+body.tema-escuro .card-right p {
+    color: #cfd8dc;
+}
+
+/* History card */
+body.tema-escuro .history-card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.tema-escuro .history-card:hover {
+    background: #deacab;
+    box-shadow: 0 12px 24px rgba(222, 172, 171, 0.3);
+}
+
+body.tema-escuro .history-card h2 {
+    color: #9fae8a;
+}
+
+body.tema-escuro .history-body p {
+    color: #cfd8dc;
+}
+
+/* Navigation */
+body.tema-escuro .main-nav a {
+    color: #cfd8dc;
+}
+
+body.tema-escuro .main-nav a.active {
+    background: #697159;
+    color: #fff;
+}
+
+/* Buttons */
+body.tema-escuro .btn-ghost {
+    background: #333;
+    color: #e0e0e0;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+body.tema-escuro .btn-primary {
+    background: #697159;
+    color: #fff;
+}
+
+/* Footer */
+body.tema-escuro .site-footer {
+    color: #cfd8dc;
+}
+
+/* Card borders */
+body.tema-escuro .card::before,
+body.tema-escuro .history-card::before {
+    border-color: #444;
+}
+
+body.tema-escuro .card:hover::before,
+body.tema-escuro .history-card:hover::before {
+    border-color: rgba(222, 172, 171, 0.5);
 }
 
 /* responsive */

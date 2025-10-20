@@ -61,3 +61,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })();
 
+// Add success messages on form submit
+document.querySelector('.formularioLogin').addEventListener('submit', function(e) {
+    e.preventDefault();
+    showMessage('Login feito!', this);
+});
+
+document.querySelector('.formularioCadastro').addEventListener('submit', function(e) {
+    e.preventDefault();
+    showMessage('Cadastro feito!', this);
+});
+
+function showMessage(text, form) {
+    const message = document.createElement('div');
+    message.textContent = text;
+    message.style.cssText = `
+        grid-column: 1 / -1;
+        text-align: center;
+        color: #697159;
+        background: #f0f7f0;
+        border: 1px solid #697159;
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 15px;
+    `;
+    
+    form.appendChild(message);
+    
+    setTimeout(() => {
+        message.remove();
+    }, 3000);
+}
+

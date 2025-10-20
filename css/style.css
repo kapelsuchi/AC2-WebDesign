@@ -423,6 +423,22 @@ body {
     color: #1b1b1b;
 }
 
+body.tema-escuro .rodape {
+    background-color: #1a2533;
+    color: #e0e0e0;
+}
+
+body.tema-escuro .linksRodape a {
+    color: #e0e0e0;
+}
+
+body.tema-escuro .linksRodape a:hover {
+    background-color: #deacab;
+    color: white;
+}
+
+
+
 
 
 .digitando {

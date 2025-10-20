@@ -198,6 +198,36 @@ p {
     margin-top: 15px;
 }
 
+.botaoFlutuante {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botaoFlutuante:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.tema-escuro .botaoFlutuante {
+    background: linear-gradient(135deg, #3b4a5a, #2c3e50);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
 
 @media (max-width: 900px) {
 .blocos {
@@ -265,3 +295,111 @@ p {
 word-wrap: break-word;
 overflow-wrap: break-word;
 }
+
+/* ==================== DARK THEME - ODS PAGE ==================== */
+body.tema-escuro {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.tema-escuro .botaoFlutuante {
+    background: linear-gradient(135deg, #3b4a5a, #2c3e50);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+/* Header */
+body.tema-escuro .cabecalhoContainer {
+    background: #121212 !important;
+}
+
+body.tema-escuro #menuNav a,
+body.tema-escuro #menuLogin a {
+    color: #e0e0e0;
+}
+
+body.tema-escuro #menuNav a:hover,
+body.tema-escuro #menuLogin a:hover {
+    background-color: #deacab;
+    color: white;
+}
+
+/* Body background */
+body.tema-escuro {
+    background-color: #1a1a1a;
+}
+
+/* Text elements */
+body.tema-escuro .texto_titulo {
+    color: #cfd8dc;
+}
+
+body.tema-escuro .nonedit_text {
+    color: #e0e0e0;
+}
+
+/* ODS Blocks */
+body.tema-escuro .bloco_um,
+body.tema-escuro .bloco_dois,
+body.tema-escuro .bloco_tres,
+body.tema-escuro .bloco_quatro,
+body.tema-escuro .bloco_cinco,
+body.tema-escuro .bloco_seis {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Keep the same hover colors in dark mode */
+body.tema-escuro .bloco_um:hover {
+    background-color: #D29F80;
+    color: white;
+}
+
+body.tema-escuro .bloco_dois:hover {
+    background-color: #DA6C6C;
+    color: white;
+}
+
+body.tema-escuro .bloco_tres:hover {
+    background-color: #9CA986;
+    color: white;
+}
+
+body.tema-escuro .bloco_quatro:hover {
+    background-color: #7ba4e2;
+    color: white;
+}
+
+body.tema-escuro .bloco_cinco:hover {
+    background-color: #295F98;
+    color: white;
+}
+
+body.tema-escuro .bloco_seis:hover {
+    background-color: #5D866C;
+    color: white;
+}
+
+/* ODS Titles */
+body.tema-escuro .titulo_ods {
+    color: #9fae8a;
+}
+
+/* Paragraphs inside blocks */
+body.tema-escuro .bloco_um p,
+body.tema-escuro .bloco_dois p,
+body.tema-escuro .bloco_tres p,
+body.tema-escuro .bloco_quatro p,
+body.tema-escuro .bloco_cinco p,
+body.tema-escuro .bloco_seis p {
+    color: #cfd8dc;
+}
+
+/* Headings */
+body.tema-escuro h2 {
+    color: #e0e0e0;
+}
+
