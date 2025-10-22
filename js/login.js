@@ -87,3 +87,38 @@ function showMessage(text, form) {
     }, 3000);
 }
 
+// Menu Hambúrguer
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburguer = document.querySelector('.hamburguer');
+    const menuNav = document.getElementById('menuNav');
+    const menuLogin = document.getElementById('menuLogin');
+
+    if (hamburguer) {
+        hamburguer.addEventListener('click', function() {
+            this.classList.toggle('active');
+            menuNav.classList.toggle('active');
+            menuLogin.classList.toggle('active');
+        });
+    }
+
+    // Fechar menu ao clicar em um link (mobile)
+    const menuLinks = document.querySelectorAll('#menuNav a, #menuLogin a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 600) {
+                hamburguer.classList.remove('active');
+                menuNav.classList.remove('active');
+                menuLogin.classList.remove('active');
+            }
+        });
+    });
+
+    // Fechar menu ao redimensionar a tela para maior que 600px
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 600) {
+            hamburguer.classList.remove('active');
+            menuNav.classList.remove('active');
+            menuLogin.classList.remove('active');
+        }
+    });
+});

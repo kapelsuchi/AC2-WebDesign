@@ -1,5 +1,6 @@
 .body {
     overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .cabecalhoContainer {
@@ -233,14 +234,67 @@ body {
 }
 
 .rodape {
-    text-align: center;
-    padding: 15px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 40px;
+  background-color: #8f987d;
+  color: #f7f3f1;
+  padding: 20px 40px;
+  margin-top: 40px;
+  font-size: 14px;
+  margin-bottom: 0;
 }
+
+.rodape-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.linksRodape {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.linksRodape a {
+  color: #f7f3f1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 5px 8px;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.linksRodape a:hover {
+  background-color: #deacab;
+  color: white;
+}
+
+.redesSociaisRodape {
+  display: flex;
+  gap: 15px;
+}
+
+.redesSociaisRodape img {
+  height: 35px;
+  width: 35px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redesSociaisRodape img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.rodape p {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
 
 .botaoFlutuante {
     position: fixed;
@@ -366,4 +420,313 @@ body.tema-escuro .bloco_social_quatro:hover {
 body.tema-escuro .rodape {
     background: #1a2533;
     color: #e0e0e0;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Para telas até 900px */
+@media (max-width: 900px) {
+    .conteudoPrincipal {
+        margin: 40px 50px;
+    }
+    
+    .blocos {
+        justify-content: center;
+    }
+    
+    .bloco_um,
+    .bloco_dois,
+    .bloco_tres,
+    .bloco_quatro {
+        width: calc(50% - 16px);
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .blocos_social {
+        margin: 40px 50px;
+        flex-wrap: wrap;
+    }
+    
+    .bloco_social_um,
+    .bloco_social_dois,
+    .bloco_social_tres,
+    .bloco_social_quatro {
+        max-width: calc(50% - 12px);
+        height: auto;
+        min-height: 80px;
+    }
+    
+    #titulo {
+        font-size: 42px;
+        margin-bottom: 60px;
+    }
+    
+    /* Menu responsivo */
+    .cabecalhoContainer {
+        margin-top: 1%;
+    }
+    
+    .menu {
+        flex-wrap: wrap;
+    }
+    
+    #menuNav, #menuLogin {
+        flex: 1 1 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+/* Para telas até 600px - MENU HAMBÚRGUER */
+@media (max-width: 600px) {
+    /* Primeiro, vamos garantir que o hamburguer seja visível */
+    .hamburguer {
+        display: flex !important;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 4px;
+        padding: 8px;
+        background: transparent;
+        border: none;
+        margin-bottom: 10px;
+    }
+    
+    .hamburguer span {
+        width: 25px;
+        height: 3px;
+        background-color: #697159;
+        transition: 0.3s;
+        display: block;
+    }
+    
+    /* Esconder os menus originais */
+    #menuNav, #menuLogin {
+        display: none !important;
+    }
+    
+    /* Mostrar quando ativo */
+    #menuNav.active, #menuLogin.active {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 15px 0;
+        background: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 999;
+        margin: 0;
+    }
+    
+    #menuNav.active li, #menuLogin.active li {
+        margin: 0;
+        padding: 12px 16px;
+        border-bottom: 1px solid #f0f0f0;
+        list-style: none;
+    }
+    
+    #menuNav.active a, #menuLogin.active a {
+        padding: 8px 0;
+        border-radius: 0;
+        text-decoration: none;
+        color: #697159;
+        display: block;
+    }
+    
+    /* Animações do hamburguer */
+    .hamburguer.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .hamburguer.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburguer.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Layout do menu principal */
+    .cabecalhoContainer {
+        padding: 10px 0;
+        margin-top: 0;
+        position: relative;
+    }
+    
+    .menu {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 16px;
+        position: relative;
+    }
+    
+    /* Conteúdo responsivo */
+    .conteudoPrincipal {
+        margin: 30px 20px;
+        gap: 20px;
+    }
+    
+    .blocos {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .bloco_um,
+    .bloco_dois,
+    .bloco_tres,
+    .bloco_quatro {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+    
+    .blocos_social {
+        margin: 30px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .bloco_social_um,
+    .bloco_social_dois,
+    .bloco_social_tres,
+    .bloco_social_quatro {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        min-height: 70px;
+    }
+    
+    #titulo {
+        font-size: 36px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    
+    .contatoContainer {
+        margin: 10px 0 30px 0;
+        padding: 20px;
+    }
+    
+    /* Rodapé responsivo */
+    .rodape-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .linksRodape {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .rodape {
+        padding: 15px 20px;
+        margin-top: 30px;
+    }
+}
+
+/* Para telas maiores que 600px - esconder hamburguer */
+@media (min-width: 601px) {
+    .hamburguer {
+        display: none !important;
+    }
+    
+    #menuNav, #menuLogin {
+        display: flex !important;
+    }
+}
+
+/* Para telas até 320px */
+@media (max-width: 320px) {
+    .conteudoPrincipal {
+        margin: 20px 15px;
+    }
+    
+    .blocos_social {
+        margin: 20px 15px;
+    }
+    
+    #titulo {
+        font-size: 28px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    
+    .bloco_um,
+    .bloco_dois,
+    .bloco_tres,
+    .bloco_quatro {
+        padding: 20px 16px;
+        margin-bottom: 30px;
+    }
+    
+    .blocos h1 {
+        font-size: 20px;
+    }
+    
+    .blocos p {
+        font-size: 16px;
+    }
+    
+    .bloco_social_um,
+    .bloco_social_dois,
+    .bloco_social_tres,
+    .bloco_social_quatro {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+    
+    .contatoContainer {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .linksRodape {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .redesSociaisRodape {
+        justify-content: center;
+    }
+    
+    .icone_img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Tema escuro responsivo */
+@media (max-width: 600px) {
+    body.tema-escuro .menu {
+        background: #121212;
+    }
+    
+    body.tema-escuro #menuNav.active, 
+    body.tema-escuro #menuLogin.active {
+        background: #1e1e1e;
+    }
+    
+    body.tema-escuro #menuNav.active li, 
+    body.tema-escuro #menuLogin.active li {
+        border-bottom: 1px solid #333;
+    }
+    
+    body.tema-escuro .hamburguer span {
+        background-color: #e0e0e0;
+    }
+    
+    body.tema-escuro #menuNav.active a,
+    body.tema-escuro #menuLogin.active a {
+        color: #e0e0e0;
+    }
+    
+    body.tema-escuro #menuNav.active a:hover,
+    body.tema-escuro #menuLogin.active a:hover {
+        background-color: #deacab;
+        color: white;
+    }
 }

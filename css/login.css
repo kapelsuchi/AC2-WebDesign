@@ -4,6 +4,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main.formContainer {
@@ -114,6 +115,7 @@ main.formContainer {
   padding: 20px 40px;
   margin-top: 40px;
   font-size: 14px;
+  margin-bottom: 0;
 }
 
 .rodape-container {
@@ -201,7 +203,7 @@ body.tema-escuro input[type="email"],
 body.tema-escuro input[type="password"],
 body.tema-escuro input[type="text"] {
   background: #1a2533;
-  border: 1px solid #324557;
+  border: 1px solid #2d2d2d;
   color: #f5f5f5;
   border-radius: 8px;
 }
@@ -246,4 +248,179 @@ body.tema-escuro .linksRodape a:hover {
     color: white;
 }
 
+/* ===== RESPONSIVIDADE ===== */
 
+/* Para telas até 900px */
+@media (max-width: 900px) {
+    main.formContainer {
+        margin: 40px auto;
+        padding: 24px;
+        max-width: 90%;
+    }
+    
+    .formularioLogin, 
+    .formularioCadastro {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .formularioLogin label,
+    .formularioCadastro label {
+        margin-top: 10px;
+    }
+    
+    #loginSection, #cadastroSection {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    main.formContainer {
+        margin: 30px auto;
+        padding: 16px;
+    }
+    
+    .toggleButtons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .toggleButtons button {
+        width: 100%;
+    }
+    
+    #loginSection, #cadastroSection {
+        padding: 16px;
+    }
+    
+    .formularioLogin input[type="submit"],
+    .formularioCadastro input[type="submit"] {
+        margin-top: 15px;
+        padding: 12px;
+    }
+    
+   
+    .cabecalhoContainer {
+        padding: 10px 0;
+    }
+    
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 16px;
+    }
+    
+    .hamburguer {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 4px;
+        margin-bottom: 10px;
+    }
+    
+    .hamburguer span {
+        width: 25px;
+        height: 3px;
+        background-color: #697159;
+        transition: 0.3s;
+    }
+    
+    #menuNav, #menuLogin {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        padding: 15px 0;
+    }
+    
+    #menuNav.active, #menuLogin.active {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    #menuNav li, #menuLogin li {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    body.tema-escuro #menuNav li a, 
+    body.tema-escuro #menuLogin li a {
+      color: white;
+    }
+    
+    .hamburguer.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburguer.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburguer.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+ 
+    .rodape-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .linksRodape {
+        display: none;
+    }
+}
+
+
+@media (max-width: 320px) {
+    main.formContainer {
+        margin: 20px auto;
+        padding: 12px;
+    }
+    
+    #loginSection, #cadastroSection {
+        padding: 12px;
+    }
+    
+    .formularioLogin input[type="email"],
+    .formularioLogin input[type="password"],
+    .formularioCadastro input[type="text"],
+    .formularioCadastro input[type="email"],
+    .formularioCadastro input[type="password"] {
+        padding: 8px 10px;
+    }
+    
+    .toggleButtons button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .rodape {
+        padding: 15px 20px;
+    }
+    
+    .linksRodape {
+        display: none;
+    }
+    
+    .redesSociaisRodape img {
+        justify-content: center;
+        height: 25px;
+        width: 25px;
+        
+    }
+}
+
+
+@media (max-width: 600px) {
+    body.tema-escuro .menu {
+        background: #0d0d0d;
+    }
+    
+    body.tema-escuro #menuNav li, 
+    body.tema-escuro #menuLogin li {
+        border-bottom: 1px solid #2d2d2d;
+    }
+}

@@ -39,12 +39,12 @@
 
 body {
     background-color: rgb(231, 231, 231);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .cabecalhoTexto {
     background: linear-gradient(to right, #697159, #807883, #a38ca2, #deacab, #a38ca2, #807883, #697159);
     text-transform: uppercase;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-size:400% 100%;
     animation: degrade 10s linear infinite;
     -webkit-background-clip: text;
@@ -296,7 +296,7 @@ word-wrap: break-word;
 overflow-wrap: break-word;
 }
 
-/* ==================== DARK THEME - ODS PAGE ==================== */
+
 body.tema-escuro {
     background: #121212;
     color: #e0e0e0;
