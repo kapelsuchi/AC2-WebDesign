@@ -190,7 +190,7 @@ body {
 .bloco_tres .icone_img,
 .bloco_quatro .icone_img {
     width: auto;
-    height: 100px; 
+    height: 50px; 
     max-height: 100px;
     object-fit: contain;
     margin-left: 10px;
@@ -274,7 +274,7 @@ body {
 
 .blocos_social img {
     width: auto;
-    height: 80%;
+    height: 40%;
     max-height: 80px; 
     object-fit: contain;
     margin-left: 10px;
@@ -756,8 +756,8 @@ body.tema-escuro .rodape {
     }
     
     .icone_img {
-        width: 40px;
-        height: 40px;
+        width: 5px;
+        height: 5px;
     }
 }
 

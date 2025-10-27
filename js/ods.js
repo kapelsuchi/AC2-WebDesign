@@ -71,11 +71,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuNav = document.getElementById('menuNav');
     const menuLogin = document.getElementById('menuLogin');
 
+    function closeMenu() {
+        if (hamburguer) {
+            hamburguer.classList.remove('active');
+        }
+        if (menuNav) {
+            menuNav.classList.remove('active');
+        }
+        if (menuLogin) {
+            menuLogin.classList.remove('active');
+        }
+    }
+
+    function openMenu() {
+        if (hamburguer) {
+            hamburguer.classList.add('active');
+        }
+        if (menuNav) {
+            menuNav.classList.add('active');
+        }
+        if (menuLogin) {
+            menuLogin.classList.add('active');
+        }
+    }
+
     if (hamburguer) {
         hamburguer.addEventListener('click', function() {
-            this.classList.toggle('active');
-            menuNav.classList.toggle('active');
-            menuLogin.classList.toggle('active');
+            if (this.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
         });
     }
 
@@ -84,9 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menuLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (window.innerWidth <= 600) {
-                hamburguer.classList.remove('active');
-                menuNav.classList.remove('active');
-                menuLogin.classList.remove('active');
+                closeMenu();
             }
         });
     });
@@ -94,9 +118,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fechar menu ao redimensionar a tela para maior que 600px
     window.addEventListener('resize', function() {
         if (window.innerWidth > 600) {
-            hamburguer.classList.remove('active');
-            menuNav.classList.remove('active');
-            menuLogin.classList.remove('active');
+            closeMenu();
+        }
+    });
+
+    // Fechar menu ao clicar fora (opcional)
+    document.addEventListener('click', function(event) {
+        if (window.innerWidth <= 600) {
+            const isClickInsideMenu = menuNav.contains(event.target) || 
+                                    menuLogin.contains(event.target) || 
+                                    hamburguer.contains(event.target);
+            
+            if (!isClickInsideMenu && hamburguer.classList.contains('active')) {
+                closeMenu();
+            }
         }
     });
 });
