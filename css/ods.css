@@ -41,7 +41,7 @@
 }
 
 body {
-    background-color: #f7f6f1;
+    background-color: #ffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -457,6 +457,10 @@ p {
         justify-content: center;
         text-align: center;
     }
+
+    .linksRodape {
+        display: none;
+    }
 }
 
 /* Small Mobile - 320px */
@@ -498,6 +502,10 @@ p {
     .titulo_ods {
         font-size: 24px;
     }
+
+    .linksRodape {
+        display: none;
+    }
 }
 
 .bloco_um p,
@@ -510,15 +518,6 @@ word-wrap: break-word;
 overflow-wrap: break-word;
 }
 
-.rodape-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    
-    .linksRodape {
-        display: none;
-    }
 
 .icone_ods {
     width: 90px;
@@ -637,3 +636,5 @@ body.tema-escuro .bloco_seis p {
 body.tema-escuro h2 {
     color: #e0e0e0;
 }
+
+

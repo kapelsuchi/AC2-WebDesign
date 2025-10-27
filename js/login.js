@@ -58,8 +58,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.querySelector('.formularioLogin').addEventListener('submit', function(e) {
     e.preventDefault();
-    showMessage('Login feito!', this);
+
+    const email = this.querySelector('input[type="email"]').value.trim();
+    const senha = this.querySelector('input[type="password"]').value.trim();
+
+    if (email === "admin@gmail.com" && senha === "1234") {
+        showMessage('Login realizado com sucesso!', this);
+    } else {
+        showMessage('Login inválido!', this);
+    }
 });
+
 
 document.querySelector('.formularioCadastro').addEventListener('submit', function(e) {
     e.preventDefault();
