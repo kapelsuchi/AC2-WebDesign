@@ -1,3 +1,41 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleciona todos os cards da página
+    const cards = document.querySelectorAll(".cardRecurso");
+
+  // Define as imagens correspondentes a cada card, na ordem em que aparecem
+    const imagens = [
+    { normal: "img/sign in icon.png", hover: "img/sign in icon branco.png" },
+    { normal: "img/password icon.png", hover: "img/password icon branco.png" },
+    { normal: "img/recycle icon.png", hover: "img/recycle icon branco.png" },
+    { normal: "img/joao icon.png", hover: "img/joao icon branco.png" },
+    { normal: "img/carla icon.png", hover: "img/carla icon branco.png" },
+    { normal: "img/bruno icon.png", hover: "img/bruno icon branco.png" }
+    ];
+
+    cards.forEach((card, index) => {
+    const img = card.querySelector(".iconeCard img");
+    if (!img || !imagens[index]) return;
+
+    const normalSrc = imagens[index].normal;
+    const hoverSrc = imagens[index].hover;
+
+    // Efeito hover
+    card.addEventListener("mouseenter", () => {
+        img.src = hoverSrc;
+        card.style.color = "#6d8140";
+        img.style.transition = "transform 0.3s ease, opacity 0.3s ease";
+        img.style.transform = "scale(1.05)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+        img.src = normalSrc;
+        card.style.backgroundColor = "";
+        card.style.color = "";
+        img.style.transform = "scale(1)";
+        });
+    });
+});
+
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 Recycle JS - Inicializando funcionalidades...');
@@ -281,48 +319,3 @@ document.addEventListener('keydown', (e) => {
 
 const p = document.getElementById('btnPontos');
 if (p) p.addEventListener('keydown', (e) => { if (e.key === 'Enter') p.click(); });
-
-// Menu Hambúrguer
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburguer = document.querySelector('.hamburguer');
-    const menuNav = document.getElementById('menuNav');
-    const menuLogin = document.getElementById('menuLogin');
-
-    console.log('Script carregado'); // Debug
-    console.log('Hamburguer:', hamburguer); // Debug
-    console.log('MenuNav:', menuNav); // Debug
-    console.log('MenuLogin:', menuLogin); // Debug
-
-    if (hamburguer && menuNav && menuLogin) {
-        hamburguer.addEventListener('click', function() {
-            console.log('Hamburguer clicado'); // Debug
-            this.classList.toggle('active');
-            menuNav.classList.toggle('active');
-            menuLogin.classList.toggle('active');
-        });
-    } else {
-        console.error('Elementos do menu não encontrados');
-    }
-
-    // Fechar menu ao clicar em um link (mobile)
-    const menuLinks = document.querySelectorAll('#menuNav a, #menuLogin a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 600) {
-                hamburguer.classList.remove('active');
-                menuNav.classList.remove('active');
-                menuLogin.classList.remove('active');
-            }
-        });
-    });
-
-    // Fechar menu ao redimensionar a tela para maior que 600px
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 600) {
-            if (hamburguer) hamburguer.classList.remove('active');
-            if (menuNav) menuNav.classList.remove('active');
-            if (menuLogin) menuLogin.classList.remove('active');
-        }
-    });
-});
-

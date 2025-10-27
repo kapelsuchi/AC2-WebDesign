@@ -3,12 +3,6 @@ body {
     background-color: white; 
 }
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-
 
 .cabecalhoContainer {
     margin-top: 2%;
@@ -18,9 +12,6 @@ html, body {
     display: flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
 }
 
 #menuNav {
@@ -52,94 +43,65 @@ html, body {
     color: white;
 }
 
-/* Hamburguer menu - hidden by default */
-.hamburguer {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-    padding: 10px;
-    z-index: 1001;
-}
-
-.hamburguer span {
-    width: 25px;
-    height: 3px;
-    background-color: #697159;
-    transition: 0.3s;
-}
-
-.hamburguer.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburguer.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburguer.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
-
 .rodape {
-  background-color: #8f987d;
-  color: #f7f3f1;
-  padding: 20px 40px;
-  margin-top: 40px;
-  font-size: 14px;
-  margin-bottom: 0;
+    background-color: #8f987d;
+    color: #f7f3f1;
+    padding: 20px 40px;
+    margin-top: 40px;
+    font-size: 14px;
+    margin-bottom: 0;
 }
 
 .rodape-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; 
-  gap: 15px;
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 15px;
+    margin-bottom: 10px;
 }
 
 .linksRodape {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
 }
 
 .linksRodape a {
-  color: #f7f3f1;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  padding: 5px 8px;
-  border-radius: 8px;
+    color: #f7f3f1;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 5px 8px;
+    border-radius: 8px;
 }
 
 .linksRodape a:hover {
-  background-color: #deacab;
-  color: white;
+    background-color: #deacab;
+    color: white;
 }
 
 .redesSociaisRodape {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 
 .redesSociaisRodape img {
-  height: 35px;
-  width: 35px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+    height: 35px;
+    width: 35px;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .redesSociaisRodape img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.2);
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
 .rodape p {
-  text-align: center;
-  font-size: 13px;
-  opacity: 0.9;
-  margin-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.9;
+    margin-top: 10px;
 }
 
 .secaoHero {
@@ -151,6 +113,9 @@ html, body {
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 2%;
+    border-radius: 18px;
+    border: 2px solid #e6d6d6;
+    margin-bottom: 70px;
 }
 
 .conteudoHero {
@@ -237,12 +202,15 @@ html, body {
     color: white;
 }
 
+
 .secaoTecnologia {
     text-align: center;
     padding: 60px 5%;
     max-width: 1200px;
     margin: 0 auto;
     background-color: #f7e9e8; 
+    border-radius: 18px;
+    border: 2px solid #e6d6d6;
 }
 
 .tituloSecundario {
@@ -273,33 +241,59 @@ html, body {
     max-width: 280px;
     background-color: white; 
     padding: 30px 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     text-align: center;
-    transition: transform 0.3s;
-    border: 1px solid #f2e0e0; 
-    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-radius: 18px;
+    border: 2px solid #e6d6d6;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .cardRecurso:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(109, 129, 64, 0.2);
+    background-color: #deacab;
+}
+
+.cardRecurso:hover .tituloCard,
+.cardRecurso:hover .textoCard  {
+    color: white; 
+    transition: color 0.3s ease;
 }
 
 .iconeCard {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 15px;
-    background-color: #bdc6aa; 
-    border-radius: 12px;
+    width: clamp(100px, 18%, 140px);  
+    height: clamp(100px, 18%, 140px);
+    min-width: 100px;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: clamp(32px, 5vw, 60px); 
+    line-height: 1;
+}
+
+.iconeCard img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    display: block;
 }
 
 .svgIcone {
-    width: 30px;
-    height: 30px;
-    color: #697159; 
+    width: 70%;  
+    height: 70%;
+    display: block;
+}
+
+.cardRecurso:hover .iconeCard {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(109, 129, 64, 0.2);
+    color: white;
 }
 
 .tituloCard {
@@ -320,7 +314,7 @@ html, body {
     background-color: white;
     padding-top: 100px; 
     padding-bottom: 100px;
-    
+    margin: 0 4.1% 0 4.1%; 
 }
 
 .caixaInformativa {
@@ -328,11 +322,11 @@ html, body {
     padding: 50px;
     text-align: center;
     background: linear-gradient(135deg, #ffffff 0%, #fcf3f3 100%); 
-    border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
     position: relative;
-    border: 3px solid #f9e9e9; 
     z-index: 1;
+    border-radius: 18px;
+    border: 2px solid #e6d6d6;
 }
 
 .tituloCaixa {
@@ -346,6 +340,10 @@ html, body {
     font-size: 1.1em;
     color: #8f987d; 
     line-height: 1.5;
+}
+
+#materiais {
+    margin-bottom: 80px;
 }
 
 .botaoFlutuante {
@@ -371,22 +369,25 @@ html, body {
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-/* Dark theme styles */
+
 .tema-escuro {
     background-color: #121212;
     color: #e0e0e0;
 }
 
+/* Cabeçalho */
 .tema-escuro .cabecalhoContainer {
     background: rgba(18, 18, 18, 0.95) !important;
     border-bottom: 1px solid #2a2a2a;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
+
 .tema-escuro .secaoHero {
     background: linear-gradient(135deg, #1f2a38, #2b3a4a) !important;
     color: #f0f0f0;
 }
+
 
 .tema-escuro .cardRecurso {
     background: #1e1e1e !important;
@@ -399,6 +400,7 @@ html, body {
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
+
 
 .tema-escuro .botaoFlutuante {
     background: linear-gradient(135deg, #3b4a5a, #2c3e50);
@@ -413,13 +415,15 @@ html, body {
     transform: translateY(-2px);
 }
 
+
 .tema-escuro .secaoTecnologia,
 .tema-escuro .secaoSustentavel {
-     background: linear-gradient(135deg, #1f2a38, #2b3a4a) !important;
+    background: linear-gradient(135deg, #1f2a38, #2b3a4a) !important;
     color: #ddd;
     border-top: 1px solid #2a2a2a;
     border-bottom: 1px solid #2a2a2a;
 }
+
 
 .tema-escuro a {
     color: #e0e0e0;
@@ -429,6 +433,7 @@ html, body {
 .tema-escuro a:hover {
     color: #e0e0e0;
 }
+
 
 .tema-escuro button {
     background: #1b1b1b;
@@ -485,33 +490,7 @@ body.tema-escuro .linksRodape a:hover {
     transition: all 0.6s ease;
 }
 
-/* Global table styles */
-.tabelaWrapper {
-    overflow-x: hidden;
-}
 
-.tabelaMateriais {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.tabelaMateriais th, .tabelaMateriais td {
-    border: 1px solid #eee;
-    padding: 10px;
-    text-align: left;
-}
-
-.tabelaMateriais thead th {
-    background: #f9f5f5;
-}
-
-.tabelaMateriais tbody tr:nth-child(even) {
-    background: #f7f3f1;
-}
-
-/* === MEDIA QUERIES === */
-
-/* Tablet - 900px */
 @media (max-width: 900px) {
     .secaoHero {
         flex-direction: column;
@@ -551,71 +530,9 @@ body.tema-escuro .linksRodape a:hover {
     }
 }
 
-/* Mobile - 600px */
 @media (max-width: 600px) {
-    /* Show hamburger menu */
-        .hamburguer {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        gap: 4px;
-        margin-bottom: 10px;
-    }
-    
-    .hamburguer span {
-        width: 25px;
-        height: 3px;
-        background-color: #697159;
-        transition: 0.3s;
-    }
-    
-    #menuNav, #menuLogin {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        padding: 15px 0;
-    }
-    
-    #menuNav.active, #menuLogin.active {
-        display: flex;
-        align-items: flex-start;
-    }
-    
-    #menuNav li, #menuLogin li {
-        padding: 8px 0;
-        border-bottom: 1px solid #f0f0f0;
-    }
-
-    body.tema-escuro #menuNav li a, 
-    body.tema-escuro #menuLogin li a {
-      color: white;
-    }
-    
-    .hamburguer.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .hamburguer.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburguer.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-    
- 
-    .rodape-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    
-
-    /* Card adjustments */
     .cardRecurso {
         max-width: 100%;
-        margin: 10px 0;
     }
     
     .tituloPrincipal {
@@ -634,78 +551,29 @@ body.tema-escuro .linksRodape a:hover {
         padding: 30px;
     }
     
-    .cardsRecursos { 
-        align-items: stretch; 
-        align-content: center; 
-    }
+    .cardRecurso { margin: 10px; }
 
-    /* Footer adjustments */
-    .rodape-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    
-    .linksRodape {
-        display: none !important;
-    }
+    #menuNav   { align-items: center; gap: 12px; flex-wrap: wrap; }
+    #menuLogin { align-items: center; gap: 12px; flex-wrap: wrap; }
+    .cardsRecursos { align-items: stretch; align-content: center; }
 
-    /* Dark mode mobile menu */
-    body.tema-escuro #menuNav,
-    body.tema-escuro #menuLogin {
-        background: #1a1a1a;
-    }
-
-    body.tema-escuro #menuNav li a, 
-    body.tema-escuro #menuLogin li a {
-        color: white;
-    }
-}
-
-/* Small Mobile - 320px */
-@media (max-width: 320px) {
-
-    .menu {
-        padding: 10px;
-    }
-    
-    .tituloPrincipal {
-        font-size: 1.8em;
-    }
-    
-    .tituloSecundario {
-        font-size: 1.8em;
-    }
-    
-    .caixaInformativa {
-        padding: 20px;
-    }
-    
-    .areaBotoes a {
-        display: block;
-        margin: 10px 0;
-        width: 100%;
-    }
-
-    .tabelaWrapper {
-        width: 100%;
-        font-size: small;
-    }
-
-.caixaInformativa td:nth-child(2),
-.caixaInformativa th:nth-child(2) {
-    display: none;
-}
-
-
-/* Ensure regular menu is visible on desktop */
-@media (min-width: 601px) {
-    #menuNav, #menuLogin {
-        display: flex !important;
-    }
-    
-    .linksRodape {
-        display: flex !important;
-    }
+    .tabelaWrapper{overflow-x:auto}
+    .tabelaMateriais{width:100%; border-collapse:collapse}
+    .tabelaMateriais th, .tabelaMateriais td{border:1px solid #eee; padding:10px; text-align:left}
+    .tabelaMateriais thead th{background:#f9f5f5}
+    .tabelaMateriais tbody tr:nth-child(even){background:#f7f3f1}
 
 }
+
+/* === patches globais (fora de media queries) === */
+.cardRecurso { margin: 10px; }                     /* garante Margin nos 20 cards em todas as larguras */
+#menuNav   { align-items: center; gap: 12px; flex-wrap: wrap; }
+#menuLogin { align-items: center; gap: 12px; flex-wrap: wrap; }
+.cardsRecursos { align-items: stretch; align-content: center; }  /* soma props Flexbox sem mudar o layout */
+
+/* tabelas globais (não só no mobile) */
+.tabelaWrapper{overflow-x:auto}
+.tabelaMateriais{width:100%; border-collapse:collapse}
+.tabelaMateriais th, .tabelaMateriais td{border:1px solid #eee; padding:10px; text-align:left}
+.tabelaMateriais thead th{background:#f9f5f5}
+.tabelaMateriais tbody tr:nth-child(even){background:#f7f3f1}
