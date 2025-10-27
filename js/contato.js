@@ -1,3 +1,37 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+    const icones = [
+        { selector: ".bloco_um .icone_img", normal: "img/maquina icon.png", hover: "img/maquina icon branco.png" },
+        { selector: ".bloco_dois .icone_img", normal: "img/cantina icon.png", hover: "img/cantina icon branco.png" },
+        { selector: ".bloco_tres .icone_img", normal: "img/material icon.png", hover: "img/material icon branco.png" },
+        { selector: ".bloco_quatro .icone_img", normal: "img/faq icon.png", hover: "img/faq icon branco.png" },
+
+        { selector: ".bloco_social_um .icone_img", normal: "img/instagram icon.png", hover: "img/instagram icon branco.png" },
+        { selector: ".bloco_social_dois .icone_img", normal: "img/facebook icon.png", hover: "img/facebook icon branco.png" },
+        { selector: ".bloco_social_tres .icone_img", normal: "img/twitter icon.png", hover: "img/twitter icon branco.png" },
+        { selector: ".bloco_social_quatro .icone_img", normal: "img/youtube icon.png", hover: "img/youtube icon branco.png" }
+    ];
+
+    icones.forEach(item => {
+        const img = document.querySelector(item.selector);
+        if (!img) return;
+
+        const card = img.closest("a, .bloco_um, .bloco_dois, .bloco_tres, .bloco_quatro");
+
+        card.addEventListener("mouseenter", () => {
+                img.src = item.hover;
+        });
+
+        card.addEventListener("mouseleave", () => {
+            img.style.opacity = "0";
+            setTimeout(() => {
+                img.src = item.normal;
+                img.style.opacity = "1";
+            }, 150);
+        });
+    });
+});
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const botaoTema = document.getElementById('botaoTema');
@@ -70,3 +104,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+

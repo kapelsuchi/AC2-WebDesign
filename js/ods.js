@@ -1,3 +1,38 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+    const icones = [
+        { selector: ".bloco_um .icone_ods", normal: "img/industria icon.png", hover: "img/industria icon branco.png" },
+        { selector: ".bloco_dois .icone_ods", normal: "img/cidade icon.png", hover: "img/cidade icon branco.png" },
+        { selector: ".bloco_tres .icone_ods", normal: "img/recycle icon.png", hover: "img/recycle icon branco.png" },
+        { selector: ".bloco_quatro .icone_ods", normal: "img/clima icon.png", hover: "img/clima icon branco.png" },
+        { selector: ".bloco_cinco .icone_ods", normal: "img/agua icon.png", hover: "img/agua icon branco.png" },
+        { selector: ".bloco_seis .icone_ods", normal: "img/arvore icon.png", hover: "img/arvore icon branco.png" }
+    ];
+
+    icones.forEach(item => {
+        const img = document.querySelector(item.selector);
+        if (!img) return;
+
+        // Incluímos todos os blocos até o seis
+        const card = img.closest("a, .bloco_um, .bloco_dois, .bloco_tres, .bloco_quatro, .bloco_cinco, .bloco_seis");
+        if (!card) return;
+
+        card.addEventListener("mouseenter", () => {
+            img.src = item.hover;
+            img.style.transition = "filter 0.3s ease, opacity 0.3s ease";
+            img.style.filter = "brightness(100%)";
+        });
+
+        card.addEventListener("mouseleave", () => {
+            img.style.opacity = "0";
+            setTimeout(() => {
+                img.src = item.normal;
+                img.style.opacity = "1";
+            }, 150);
+        });
+    });
+})
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const botaoTema = document.getElementById('botaoTema');
