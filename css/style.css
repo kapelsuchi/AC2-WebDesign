@@ -1,11 +1,13 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     background-color: white; 
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow-x: hidden !important;
-    width: 100%;
 }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 
 
 .cabecalhoContainer {
@@ -485,7 +487,7 @@ body.tema-escuro .linksRodape a:hover {
 
 /* Global table styles */
 .tabelaWrapper {
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .tabelaMateriais {
@@ -662,6 +664,7 @@ body.tema-escuro .linksRodape a:hover {
 
 /* Small Mobile - 320px */
 @media (max-width: 320px) {
+
     .menu {
         padding: 10px;
     }
@@ -683,7 +686,17 @@ body.tema-escuro .linksRodape a:hover {
         margin: 10px 0;
         width: 100%;
     }
+
+    .tabelaWrapper {
+        width: 100%;
+        font-size: small;
+    }
+
+.caixaInformativa td:nth-child(2),
+.caixaInformativa th:nth-child(2) {
+    display: none;
 }
+
 
 /* Ensure regular menu is visible on desktop */
 @media (min-width: 601px) {
@@ -694,4 +707,5 @@ body.tema-escuro .linksRodape a:hover {
     .linksRodape {
         display: flex !important;
     }
+
 }
