@@ -526,50 +526,70 @@ body.tema-escuro .rodape {
     }
 }
 
+/* --- Hamburger Icon & Menu Structure --- */
 @media (max-width: 600px) {
-    .conteudoPrincipal {
-        margin: 20px 20px;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .blocos {
+    /* Displays the hamburger icon */
+    .hamburguer {
         display: flex;
         flex-direction: column;
-        gap: 24px;
-        align-items: center;
+        cursor: pointer;
+        gap: 4px;
+        margin-bottom: 10px;
     }
-
-    .bloco_um,
-    .bloco_dois,
-    .bloco_tres,
-    .bloco_quatro {
-        max-width: 100%;
-    }
-
-    .blocos_social {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .blocos_social a {
-        max-width: 100%;
-    }
-}
-
-
-/* Para telas maiores que 600px - esconder hamburguer */
-@media (min-width: 601px) {
-    .hamburguer {
-        display: none !important;
+    
+    .hamburguer span {
+        width: 25px;
+        height: 3px;
+        background-color: #697159;
+        transition: 0.3s;
     }
     
     #menuNav, #menuLogin {
-        display: flex !important;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        padding: 15px 0;
+    }
+    
+    #menuNav.active, #menuLogin.active {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    #menuNav li, #menuLogin li {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    body.tema-escuro #menuNav li a, 
+    body.tema-escuro #menuLogin li a {
+      color: white;
+    }
+    
+    .hamburguer.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburguer.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburguer.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+ 
+    .rodape-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .linksRodape {
+        display: none;
     }
 }
-
 @media (max-width: 320px) {
     #titulo {
         font-size: 26px;
@@ -598,34 +618,3 @@ body.tema-escuro .rodape {
 }
 
 
-/* Tema escuro responsivo */
-@media (max-width: 600px) {
-    body.tema-escuro .menu {
-        background: #121212;
-    }
-    
-    body.tema-escuro #menuNav.active, 
-    body.tema-escuro #menuLogin.active {
-        background: #1e1e1e;
-    }
-    
-    body.tema-escuro #menuNav.active li, 
-    body.tema-escuro #menuLogin.active li {
-        border-bottom: 1px solid #333;
-    }
-    
-    body.tema-escuro .hamburguer span {
-        background-color: #e0e0e0;
-    }
-    
-    body.tema-escuro #menuNav.active a,
-    body.tema-escuro #menuLogin.active a {
-        color: #e0e0e0;
-    }
-    
-    body.tema-escuro #menuNav.active a:hover,
-    body.tema-escuro #menuLogin.active a:hover {
-        background-color: #deacab;
-        color: white;
-    }
-}

@@ -508,6 +508,10 @@ body.tema-escuro .linksRodape a:hover {
         flex-wrap: wrap;
     }
     
+    .botaoFlutuante {
+        display: none;
+    }
+    
     .areaBotoes a {
         margin: 5px;
     }
@@ -531,6 +535,62 @@ body.tema-escuro .linksRodape a:hover {
 }
 
 @media (max-width: 600px) {
+
+    body, html {
+        overflow-x: auto;
+    }
+
+      .hamburguer {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 4px;
+        margin-bottom: 10px;
+        margin-left: 2%;
+    }
+    
+    .hamburguer span {
+        width: 25px;
+        height: 3px;
+        background-color: #697159;
+        transition: 0.3s;
+    }
+    
+    #menuNav, #menuLogin {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        padding: 15px 0;
+    }
+    
+    #menuNav.active, #menuLogin.active {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    #menuNav li, #menuLogin li {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    body.tema-escuro #menuNav li a, 
+    body.tema-escuro #menuLogin li a {
+      color: white;
+    }
+    
+    .hamburguer.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburguer.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburguer.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
     .cardRecurso {
         max-width: 100%;
     }
@@ -550,12 +610,26 @@ body.tema-escuro .linksRodape a:hover {
     .caixaInformativa {
         padding: 30px;
     }
-    
+
+    .linksRodape {
+        display: none;
+    }
+
+    .redesSociaisRodape {
+        display: flex;
+        margin: auto;
+    }
     .cardRecurso { margin: 10px; }
 
     #menuNav   { align-items: center; gap: 12px; flex-wrap: wrap; }
     #menuLogin { align-items: center; gap: 12px; flex-wrap: wrap; }
     .cardsRecursos { align-items: stretch; align-content: center; }
+
+    .caixaInformativa td:nth-child(2),
+    .caixaInformativa th:nth-child(2) {
+    display: none;
+}
+
 
     .tabelaWrapper{overflow-x:auto}
     .tabelaMateriais{width:100%; border-collapse:collapse}
@@ -576,4 +650,4 @@ body.tema-escuro .linksRodape a:hover {
 .tabelaMateriais{width:100%; border-collapse:collapse}
 .tabelaMateriais th, .tabelaMateriais td{border:1px solid #eee; padding:10px; text-align:left}
 .tabelaMateriais thead th{background:#f9f5f5}
-.tabelaMateriais tbody tr:nth-child(even){background:#f7f3f1}
+.tabelaMateriais tbody tr:nth-child(even){background:#f7f3f1}self
