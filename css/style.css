@@ -630,6 +630,11 @@ body.tema-escuro .linksRodape a:hover {
     display: none;
 }
 
+    .quadroImagem img {
+        width: 300px;
+        height: 299px;
+    }
+
 
     .tabelaWrapper{overflow-x:auto}
     .tabelaMateriais{width:100%; border-collapse:collapse}
