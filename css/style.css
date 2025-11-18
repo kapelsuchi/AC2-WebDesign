@@ -107,34 +107,38 @@ body {
 .secaoHero {
     display: flex;
     align-items: center;
-    padding: 80px 5%;
     background-color: #f7f3f1; 
     gap: 40px;
     max-width: 1200px;
-    margin: 0 auto;
     margin-top: 2%;
     border-radius: 18px;
     border: 2px solid #e6d6d6;
     margin-bottom: 70px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* permite quebrar o layout no mobile */
+    padding: 60px 8%;
+    flex-direction: row; /* garante lado a lado */
+    margin: 2% auto 70px auto;
 }
 
 .conteudoHero {
-    flex: 1;
-    max-width: 50%;
+    flex: 1 1 400px;
+    text-align: left;
+    flex: 1 1 500px;
+    max-width: 600px;
 }
 
 .imagemHero {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    flex: 1 1 500px;
+    text-align: center;
+    margin: 0 auto; 
+    padding: 0; 
 }
 
 .quadroImagem {
-    width: 100%;
-    max-width: 600px;
-    height: 350px;
     background-color: #8f987d; 
     background-image: url('imagem.jpg'); 
     background-size: cover;
@@ -142,12 +146,28 @@ body {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     overflow: hidden;
+    aspect-ratio: 16 / 9; /* mantém proporção da imagem */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 550px; /* 🔹 menor largura pra equilibrar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quadroImagem img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
 }
 
 .tagInovacao {
     display: inline-block;
-    background-color: #e8cac8; 
-    color: #deacab; 
+    background-color: #fce8e7; 
+    color: #c79594; 
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.9em;
@@ -245,19 +265,21 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     border-radius: 18px;
     border: 2px solid #e6d6d6;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer; /* indica que é interativo */
 }
 
 .cardRecurso:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 24px rgba(109, 129, 64, 0.2);
     background-color: #deacab;
+
 }
 
 .cardRecurso:hover .tituloCard,
 .cardRecurso:hover .textoCard  {
     color: white; 
     transition: color 0.3s ease;
+    
 }
 
 .iconeCard {
@@ -292,7 +314,6 @@ body {
 
 .cardRecurso:hover .iconeCard {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 24px rgba(109, 129, 64, 0.2);
     color: white;
 }
 
@@ -308,13 +329,111 @@ body {
 }
 
 .secaoSustentavel {
-    padding: 80px 5%;
     display: flex;
     justify-content: center;
-    background-color: white;
     padding-top: 100px; 
     padding-bottom: 100px;
-    margin: 0 4.1% 0 4.1%; 
+    text-align: center;
+    padding: 60px 5%;
+    max-width: 1200px;
+    background-color: #f7e9e8; 
+    border-radius: 18px;
+    border: 2px solid #e6d6d6;
+    margin: 80px auto 80px auto; 
+}
+
+.containerVideoFix {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Bloco de texto */
+.blocoTextoFix {
+    flex: 1 1 45%;
+    background: #f9f9f9;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding-top: 100px; 
+    padding-bottom: 100px;
+    text-align: center;
+    max-width: 1200px;
+    background-color: #f7e9e8; 
+    border-radius: 18px;
+    border: 2px solid #e6d6d6;
+    margin: 80px auto 80px auto; 
+}
+
+/* Bloco do vídeo */
+.blocoVideoFix {
+    flex: 1 1 55%; /* ocupa mais espaço horizontal também */
+    position: relative;
+    padding-bottom: 45%; /* era 28.25%, aumentei pra 45% */
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 18px;
+    border: 2px solid #e6d6d6;
+}
+
+.blocoVideoFix iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.countersWrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.contadorBox {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 150px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 18px;
+    border: 2px solid #e6d6d6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer; /* indica que é interativo */
+}
+
+/* Hover do contadorBox */
+.contadorBox:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(109, 129, 64, 0.2);
+    background-color: #deacab; /* cor do hover similar aos cards */
+}
+
+/* Muda a cor do texto dentro do contadorBox no hover */
+.contadorBox:hover .contador,
+.contadorBox:hover p {
+    color: white; /* igual ao hover dos cards */
+    transition: color 0.3s ease;
+}
+
+.contador {
+    font-size: 2.5rem;
+    color: #6d8140;
+    font-weight: bold;
+}
+
+.contadorBox p {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #deacab;
+    font-weight: bold;
 }
 
 .caixaInformativa {
@@ -343,7 +462,167 @@ body {
 }
 
 #materiais {
+    margin-top: 80px; 
     margin-bottom: 80px;
+}
+
+#beneficios {
+    margin: 80px auto 80px auto; 
+}
+
+/* ======== SEÇÃO POLÍTICA DE USO ======== */
+.containerPolitica {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 60px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.caixaInformativa {
+    flex: 1 1 50%;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.caixaInformativa h2 {
+    margin-bottom: 15px;
+}
+
+.imagemPolitica {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagemPolitica img {
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+    min-height: 350px; /* garante uma altura parecida ao bloco de texto */
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    object-fit: cover; /* preenche sem distorcer */
+}
+
+.linhaDoTempo {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    border-radius: 18px;
+    border: 2px solid #e6d6d6;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background-color: #f7e9e8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timeline-container {
+    position: relative;
+    margin: 40px 0;
+    padding-left: 50px;
+    border-left: 4px solid #6d8140; /* linha principal da timeline */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    background-color: #ffffff;
+    padding: 20px 25px;
+    border-radius: 18px;
+    border: 2px solid #e6d6d6;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 20px;
+    width: 24px;
+    height: 24px;
+    background-color: #6d8140;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(109, 129, 64, 0.2);
+    background-color: #deacab;
+}
+
+.timeline-item:hover::before {
+    background-color: #ffffff;
+    transform: scale(1.2);
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #697159;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.timeline-content {
+    color: #8f987d;
+    line-height: 1.6;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    color: white;
+}
+
+#linhaDoTempoTitulo {
+    text-align: center;
+}
+
+.listaPassos details {
+    background-color: #f0fdf4;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.listaPassos details[open] {
+    background-color: #e0f7e0;
+    transform: scale(1.02);
+}
+
+.listaPassos summary {
+    font-weight: 600;
+    font-size: 16px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.listaPassos summary::marker {
+    content: "";
+}
+
+.curiosidadesCards summary:hover {
+    color: #2e7d32;
+}
+
+.curiosidadesCards p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
 }
 
 .botaoFlutuante {
@@ -369,6 +648,10 @@ body {
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
+.linhaCuriosidadesFAQ .faq {
+    flex: 1 1 100%; /* ocupa toda a linha */
+    margin-top: 40px; /* espaço entre curiosidades e FAQ */
+}
 
 .tema-escuro {
     background-color: #121212;
@@ -384,23 +667,31 @@ body {
 
 
 .tema-escuro .secaoHero {
-    background: linear-gradient(135deg, #1f2a38, #2b3a4a) !important;
+    background: linear-gradient(135deg, #242a31, #0b0c0c) !important;
     color: #f0f0f0;
+    border: 2px solid #6d8140 !important;
 }
 
+.tema-escuro .contadorBox {
+    background: #1e1e1e;
+    border: 2px solid #6d8140 !important;
+}
 
 .tema-escuro .cardRecurso {
     background: #1e1e1e !important;
-    border: 1px solid #333 !important;
+    border: 2px solid #6d8140 !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .tema-escuro .cardRecurso:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 12px 24px rgba(109, 129, 64, 0.2);
 }
 
+.tema-escuro .listaPassos details {
+    background: #242a31;
+}
 
 .tema-escuro .botaoFlutuante {
     background: linear-gradient(135deg, #3b4a5a, #2c3e50);
@@ -415,15 +706,66 @@ body {
     transform: translateY(-2px);
 }
 
+.tema-escuro .blocoVideoFix {
+    border: 2px solid #6d8140 !important;
+}
 
 .tema-escuro .secaoTecnologia,
 .tema-escuro .secaoSustentavel {
-    background: linear-gradient(135deg, #1f2a38, #2b3a4a) !important;
+    background: linear-gradient(135deg, #242a31, #0b0c0c) !important;
     color: #ddd;
-    border-top: 1px solid #2a2a2a;
-    border-bottom: 1px solid #2a2a2a;
+    border: 2px solid #6d8140 !important;
 }
 
+.tema-escuro .linhaDoTempo {
+    background: linear-gradient(135deg, #242a31, #0b0c0c) !important;
+    border: 2px solid #6d8140 !important;
+}
+
+.tema-escuro .timeline-item {
+    background-color: #1e1e1e; /* fundo geral */
+    color: white;
+}
+
+.tema-escuro .caixaInformativa {
+    background: #1e1e1e;
+    border: 2px solid #6d8140 !important;
+}
+
+.tema-escuro .imagemPolitica img {
+    border: 2px solid #6d8140 !important;
+}
+
+.tema-escuro .tabelaMateriais {
+    background-color: #1e1e1e; /* fundo geral */
+    border-collapse: collapse;
+    color: #e0e0e0; /* texto claro */
+}
+
+.tema-escuro .tabelaMateriais th,
+.tema-escuro .tabelaMateriais td {
+    border: 2px solid #6d8140 !important;
+    padding: 10px;
+    text-align: left;
+}
+
+.tema-escuro .tabelaMateriais thead th {
+    background-color: #2b2b2b; /* cabeçalho mais escuro */
+    color: #f2f2f2;
+}
+
+.tema-escuro .tabelaMateriais tbody tr:nth-child(even) {
+    background-color: #242424; /* linhas pares */
+}
+
+.tema-escuro .tabelaMateriais tbody tr:nth-child(odd) {
+    background-color: #1a1a1a; /* linhas ímpares */
+}
+
+.tema-escuro .tabelaMateriais tbody tr:hover {
+    background-color: #333333; /* destaque no hover */
+    transition: background 0.3s ease;
+}
 
 .tema-escuro a {
     color: #e0e0e0;
@@ -433,7 +775,6 @@ body {
 .tema-escuro a:hover {
     color: #e0e0e0;
 }
-
 
 .tema-escuro button {
     background: #1b1b1b;
@@ -452,7 +793,7 @@ body {
 }
 
 .tema-escuro .textoCaixa {
-    color: #1b1b1b;
+    color: #e0e0e0;
 }
 
 body.tema-escuro .rodape {
@@ -493,13 +834,37 @@ body.tema-escuro .linksRodape a:hover {
 
 @media (max-width: 900px) {
     .secaoHero {
-        flex-direction: column;
+        flex-direction: column-reverse; /* imagem vai pra baixo do texto */
         text-align: center;
+        padding: 40px 5%;
     }
     
     .conteudoHero {
         max-width: 100%;
         margin-bottom: 30px;
+        flex: none;
+        width: 100%;
+    }
+
+    .imagemHero {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+    }
+
+    .quadroImagem {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    }
+
+    .quadroImagem img {
+    width: 90%; /* ocupa quase todo o bloco, centralizada */
+    max-width: none;
+    margin: 0 auto;
+    display: block;
     }
     
     .areaBotoes {
@@ -532,7 +897,18 @@ body.tema-escuro .linksRodape a:hover {
         max-width: 45%;
         margin-bottom: 20px;
     }
+
+    .linhaCuriosidadesFAQ {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .linhaCuriosidadesFAQ .secaoSustentavel {
+        flex: 1 1 100%;
+    }
 }
+
+
 
 @media (max-width: 600px) {
 
@@ -540,7 +916,7 @@ body.tema-escuro .linksRodape a:hover {
         overflow-x: auto;
     }
 
-      .hamburguer {
+    .hamburguer {
         display: flex;
         flex-direction: column;
         cursor: pointer;
@@ -576,7 +952,7 @@ body.tema-escuro .linksRodape a:hover {
 
     body.tema-escuro #menuNav li a, 
     body.tema-escuro #menuLogin li a {
-      color: white;
+    color: white;
     }
     
     .hamburguer.active span:nth-child(1) {
@@ -655,4 +1031,4 @@ body.tema-escuro .linksRodape a:hover {
 .tabelaMateriais{width:100%; border-collapse:collapse}
 .tabelaMateriais th, .tabelaMateriais td{border:1px solid #eee; padding:10px; text-align:left}
 .tabelaMateriais thead th{background:#f9f5f5}
-.tabelaMateriais tbody tr:nth-child(even){background:#f7f3f1}self
+.tabelaMateriais tbody tr:nth-child(even){background:#f7f3f1}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Perfil do Usuário | Recycle</title>
+    <link rel stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+
+    <header class="cabecalhoContainer">
+
+        <nav class="menu">
+
+            <div class="hamburguer">
+                <span></span><span></span><span></span>
+            </div>
+
+            <ul id="menuNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ods.html">ODSs</a></li>
+                <li><a href="sobremaquina.html">Sobre a Máquina</a></li>
+                <li><a href="sobrenos.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+            <ul id="menuLogin">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="embreve.html">Meu perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="perfil-header">
+
+    <div class="perfil-capa">
+        <img src="img/capa-perfil.jpg" alt="Capa do usuário">
+    </div>
+
+    <div class="perfil-info">
+
+        <img src="img/perfil.jpg" alt="Foto do usuário" class="perfil-foto" id="perfilFotoPrincipal">
+
+        <div class="perfil-detalhes">
+
+            <h2>usuário</h2>
+
+            <p>• membro desde maio 2024</p>
+
+            <!-- Menu agora com data-tab -->
+            <nav class="perfil-menu">
+                <a href="#" class="ativo" data-tab="visao">Visão Geral</a>
+                <a href="#" data-tab="config">Configurações</a>
+            </nav>
+
+            <div class="perfil-estatisticas">
+                <div><span class="valor">18.633</span><span class="label">AÇÕES</span></div>
+                <div><span class="valor">1.084</span><span class="label">METAIS</span></div>
+                <div><span class="valor">8</span><span class="label">RECICLADOS</span></div>
+            </div>
+        </div>
+
+        <div class="top-track">
+            <p class="label">AÇÃO MAIS RECENTE</p>
+            <h4>Reciclagem</h4>
+            <button class="btn-acao">VER DETALHES</button>
+        </div>
+
+    </div>
+</section>
+
+<div id="visao">
+    <div class="blocoHero blocoHero-duasTabelas">
+        
+        <h2 class="tituloBloco">Resumo e Ranking (últimos 7 dias)</h2>
+            
+        <div class="duasTabelasWrapper">
+
+            <div class="tabelaWrap">
+        
+                <h3 class="visuallyHidden">Resumo dos Últimos 7 Dias</h3>
+        
+                <table id="tabela7dias">
+                    <thead>
+                        <tr><th>Data</th><th>Tipo de Material</th><th>Quantidade (kg)</th></tr>
+                    </thead>
+
+                    <tbody><!-- preenchido por JS --></tbody>
+                </table>
+            </div>
+
+            <div class="tabelaWrap">
+        
+        <h3 class="visuallyHidden">Ranking semanal</h3>
+        
+        <div class="ranking-scroll">
+
+            <table id="tabelaRanking">
+            
+                <thead>
+                    <tr><th>Posição</th><th>Usuário</th><th>Reciclado (kg)</th></tr>
+                </thead>
+            
+                <tbody><!-- preenchido por JS --></tbody>
+            </table>
+        </div>
+
+        <div id="destaqueUsuario" class="destaque-usuario" aria-live="polite"></div>
+
+    </div>
+</div>
+</div>
+
+<section class="graficos">
+    
+    <div class="grafico-card">
+        <h3>Distribuição de Uso</h3>
+        
+        <canvas id="graficoPizza"></canvas>    
+    
+    </div>
+
+    <div class="grafico-card">
+        
+        <h3>Atividade Semanal</h3>
+        <canvas id="graficoBarra"></canvas>
+        
+    </div>
+</section>
+</div>
+
+<section id="configuracoes" class="config-bloco" hidden>
+    <h2>Configurações</h2>
+
+    <div class="blocoHero blocoHero-duasTabelas">
+        <div class="config-foto-perfil">
+            <h3>Foto de Perfil</h3>
+
+            <div class="perfil-wrap-cfg">
+                <img id="cp-avatarImg" class="cp-avatar" src="img/perfil.jpg" alt="avatar">
+
+                
+                <div class="cp-controls">
+                    <label class="cp-btn" for="cp-fileInput">Selecionar imagem</label>
+                    <input id="cp-fileInput" class="cp-hidden" type="file" accept="image/*">
+            
+                    <div style="margin-top:8px">
+                        <button id="cp-uploadBtn" class="cp-btn" disabled>Enviar</button>
+                    </div>
+            
+                    <div style="margin-top:8px; width:260px">
+                        <div class="cp-progress" id="cp-progress"><i></i></div>
+                    </div>
+            
+                    <p id="cp-msg" class="cp-msg"></p>
+                </div>
+            </div>
+
+            <p class="nota-pequena">Recomendado: JPG/PNG até 4 MB. A imagem será cortada/ajustada pelo servidor.</p>
+        </div>
+        
+        <div class="blocoConfig">
+            <h3>Alterar nome da conta</h3>
+
+            <label for="inputNome">Novo nome:</label>
+            <input type="text" id="inputNome" placeholder="Digite seu novo nome">
+
+            <button id="btnSalvarNome">Salvar nome</button>
+
+            <p id="statusNome" style="margin-top: 10px; font-size: 14px;"></p>
+        </div>
+    </div>
+</section>
+
+<section id="rr-detalhes-section" aria-hidden="true">
+    <div id="rr-modalOverlay" class="rr-modalOverlay" aria-hidden="true">
+        <div id="rr-modal" class="rr-modal" role="dialog" aria-modal="true" aria-labelledby="rr-modalTitle">
+        <header class="rr-modalHeader">
+            <h3 id="rr-modalTitle">Detalhes da sua reciclagem</h3>
+        </header>
+
+        <div class="rr-modalBody">
+            <div class="rr-left">
+            <section class="rr-summary">
+                <h4>Resumo (últimos 7 dias)</h4>
+                <p><strong>Total (7 dias):</strong> <span id="rr-total7">—</span> kg</p>
+                <p><strong>Total visível:</strong> <span id="rr-totalGeral">—</span> kg</p>
+                <p><strong>Sua posição:</strong> <span id="rr-posicao">—</span></p>
+            </section>
+
+            <section class="rr-last7">
+                <h4>Últimos registros</h4>
+                <ul id="rr-list7" class="rr-list7"></ul>
+            </section>
+            </div>
+
+            <aside class="rr-right">
+            <section class="rr-breakdown">
+                <h4>Distribuição por material</h4>
+                <table id="rr-breakTable">
+                <thead><tr><th>Material</th><th>kg</th><th>%</th></tr></thead>
+                <tbody></tbody>
+                </table>
+            </section>
+            </aside>
+        </div>
+
+        <footer class="rr-modalFooter">
+            <button id="rr-closeBtn" class="rr-closeBtn">Fechar</button>
+        </footer>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="javascript/profile.js"></script>
+
+    <footer class="rodape">
+        <div class="rodape-container">
+            <div class="linksRodape">
+                <a href="index.html">Home</a>
+                <a href="ods.html">ODSs</a>
+                <a href="sobremaquina.html">Sobre a Máquina</a>
+                <a href="sobrenos.html">Sobre Nós</a>
+                <a href="contato.html">Contato</a>
+            </div>
+
+            <div class="redesSociaisRodape">
+                <a href="https://www.instagram.com"><img src="img/instagram icon branco.png" alt="Instagram" target="_blank"></a>
+                <a href="https://www.facebook.com"><img src="img/facebook icon branco.png" alt="Facebook" target="_blank"></a>
+                <a href="https://www.twitter.com"><img src="img/twitter icon branco.png" alt="Twitter" target="_blank"></a>
+                <a href="https://www.youtube.com"><img src="img/youtube icon branco.png" alt="YouTube" target="_blank"></a>
+            </div>
+        </div>
+    
+    <p>&copy; 2025 Recycle. Todos os direitos reservados.</p>
+
+</footer>
+
+</body>
+</html>
+

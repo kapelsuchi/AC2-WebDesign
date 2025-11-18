@@ -1,0 +1,755 @@
+.cabecalhoContainer {
+    margin-top: 2%;
+    width: 100%;
+}
+.menu {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+#menuNav {
+    display: flex;
+    justify-content: center;
+    flex: 1; 
+}
+
+#menuLogin {
+    display: flex;
+    margin-right: 2%;
+}
+
+#menuNav li, #menuLogin li {
+    margin: 0 15px;
+}
+
+#menuNav a, #menuLogin a {
+    color: #697159;
+    font-weight: bold;
+    display: block;
+    padding: 10px 5px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+#menuNav li a:hover, #menuLogin li a:hover {
+    background-color:  #deacab;
+    color: white;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #ffff;
+    color: #2f3a2a;
+    margin: 0;
+    padding: 0;
+}
+
+.perfil-header {
+    position: relative;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.perfil-capa img {
+    width: 100%;
+    height: 260px;
+}
+
+.perfil-info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px 60px;
+    position: relative;
+    background-color: white;
+}
+
+.perfil-foto {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #6d8140;
+    position: absolute;
+    top: -70px;
+    left: 60px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    margin-right: 20px;
+}
+
+.perfil-detalhes {
+    margin-left: 200px;
+    flex: 1;
+    font-size: 20px;
+    color: #000000; 
+    margin-bottom: 10px;
+}
+
+.perfil-detalhes h2 {
+    margin: 0;
+    font-size: 30px;
+    color: #333;
+}
+
+.perfil-detalhes p {
+    color: #777;
+    margin: 5px 0 15px;
+    font-size: 17px;
+}
+
+.perfil-menu {
+    display: flex;
+    gap: 18px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.perfil-menu a {
+    color: #555;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.perfil-menu a:hover,
+.perfil-menu a.ativo {
+    color: #6d8140;
+    border-bottom: 2px solid #6d8140;
+}
+
+.perfil-estatisticas {
+    display: flex;
+    gap: 40px;
+    margin-top: 15px;
+}
+
+.perfil-estatisticas .valor {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+}
+
+.perfil-estatisticas .label {
+    display: block;
+    font-size: 12px;
+    color: #777;
+}
+
+.top-track {
+    text-align: right;
+    margin-left: 30px;
+}
+
+.top-track .label {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.top-track h4 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #000;
+}
+
+.btn-acao {
+    background: #6d8140;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius:18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-acao:hover {
+    background: #8ae46fff;
+}
+
+.blocos {
+    margin: 40px 30px;
+    display: inline-block;
+    vertical-align: top;
+    width: 28%;
+    justify-content: space-around;
+    text-align: center;
+    margin-top:50px;
+    margin-bottom: 100px;
+    border-radius: 18px;
+    background: #ffffff;
+    transform-origin: center;
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    background-color: white; 
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 2px solid #e6d6d6;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    font-size: 20px;
+}
+
+.blocos:hover{
+    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s ease;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(109, 129, 64, 0.2);
+    background-color: #deacab;
+    color: #ffffff;
+}
+
+.blocos:hover h2,
+.blocos:hover h2
+.blocos:hover p  {
+    transition: color 0.3s ease;
+}
+
+.blocoHero-duasTabelas {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 28px;             
+    margin: 80px auto;          
+    max-width: 1300px;          
+    box-sizing: border-box;
+    border: 2px solid #deacab;  
+    border-radius: 6px;         
+    background: #f7f3f1;
+}
+
+.blocoHero-duasTabelas .tituloBloco {
+    text-align: center;
+    margin: 0 0 6px;
+    font-size: 30px;
+    color: #6d8140;
+    font-weight: bold;
+}
+
+.duasTabelasWrapper {
+    display: flex;
+    gap: 100px;              
+    justify-content: center;    
+    align-items: stretch;        
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.duasTabelasWrapper .tabelaWrap {
+    flex: 0 1 45%;             
+    min-width: 300px;          
+    max-width: 520px;          
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-sizing: border-box;
+    padding: 12px;             
+    background: transparent;
+}
+
+.duasTabelasWrapper .tabelaWrap {
+    height: 520px;     
+}
+
+.duasTabelasWrapper table,
+.duasTabelasWrapper thead th,
+.duasTabelasWrapper tbody td {
+    border-radius: 0 !important;
+}
+
+.duasTabelasWrapper table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;        
+    background: transparent;
+}
+
+.duasTabelasWrapper thead th {
+    background: #6d8140;       
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 10px;
+    text-align: left;
+    box-sizing: border-box;
+    border: none;                 
+}
+
+.duasTabelasWrapper tbody td {
+    padding: 12px 10px;
+    border: 2px solid #6d8140;   
+    color: #161812;
+    font-weight: 500;
+    background: #ffffff;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.duasTabelasWrapper table {
+    outline: none;
+    box-shadow: none;
+}
+
+.duasTabelasWrapper tbody tr:nth-child(even) td {
+    background: #fff;
+}
+
+.duasTabelasWrapper tbody tr td {
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.duasTabelasWrapper tbody tr:hover td {
+    background: #b3c587;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(109, 129, 64, 0.2);
+}
+
+.ranking-scroll {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    max-height: calc(100% - 60px); 
+    padding-right: 6px;
+}
+
+#destaqueUsuario {
+    margin-top: 12px;
+    padding: 12px;
+    background: linear-gradient(90deg,#dcedc1,#eaf7df);
+    color: #254b28;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+.graficos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 150px;                 
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.grafico-card {
+    flex: 0 1 48%;                
+    width: 48%;
+    min-width: 0;
+    height: 520px;            
+    padding: 28px;              
+    border-radius: 18px;
+    border: 2px solid #deacab;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    background: #f7f3f1;
+}
+
+.grafico-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* título parecido */
+.grafico-card h3 {
+    text-align: center;
+    margin-bottom: 14px;
+    font-size: 1.25rem;
+    color: #6d8140;
+}
+
+.grafico-card canvas {
+    width: 100% !important;
+    height: calc(100% - 64px) !important;
+    max-height: calc(520px - 64px) !important;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.rodape {
+    background-color: #8f987d;
+    color: #f7f3f1;
+    padding: 20px 40px;
+    margin-top: 40px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.rodape-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.linksRodape {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.linksRodape a {
+    color: #f7f3f1;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 5px 8px;
+    border-radius: 18px;
+}
+
+.linksRodape a:hover {
+    background-color: #deacab;
+    color: white;
+}
+
+.redesSociaisRodape {
+    display: flex;
+    gap: 15px;
+}
+
+.redesSociaisRodape img {
+    height: 35px;
+    width: 35px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redesSociaisRodape img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.rodape p {
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.graficos {
+    display: flex;
+    flex-direction: row;     
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 150px;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: nowrap;        
+}
+
+/* Remover o reset de arredondamento */
+.duasTabelasWrapper table,
+.duasTabelasWrapper thead th,
+.duasTabelasWrapper tbody td {
+    border-radius: initial !important;
+}
+
+/* Forçar arredondamento suave */
+.duasTabelasWrapper table {
+    border-radius: 8px !important;     /* leve arredondamento */
+    overflow: hidden !important;       /* ESSENCIAL: habilita o arredondamento */
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+/* Arredondar topo */
+.duasTabelasWrapper thead th:first-child {
+    border-top-left-radius: 8px !important;
+}
+.duasTabelasWrapper thead th:last-child {
+    border-top-right-radius: 8px !important;
+}
+
+/* Arredondar linha final */
+.duasTabelasWrapper tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 8px !important;
+}
+.duasTabelasWrapper tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 8px !important;
+}
+
+.config-bloco h2 {
+    font-weight: bold;
+    margin-left: 82px;
+    font-size: 35px;
+
+}
+
+
+
+
+
+
+
+
+
+.perfil-wrap-cfg { display:flex; gap:18px; align-items:center; flex-wrap:wrap; margin-top:12px; }
+.cp-avatar { width:110px; height:110px; border-radius:50%; object-fit:cover; border:2px solid #6d8140; }
+.cp-hidden { display:none; }
+.cp-btn { display:inline-block; padding:8px 12px; border-radius:8px; cursor:pointer; background:transparent; border:1px solid #6d8140; color: #234; font-weight:600; }
+.cp-btn:disabled { opacity:0.5; cursor:not-allowed; }
+.cp-progress { width:100%; height:8px; background:#eee; border-radius:6px; overflow:hidden; }
+.cp-progress > i { display:block; height:100%; width:0%; background:rgba(109,129,64,0.95); transition:width .15s linear; }
+.cp-msg { margin-top:8px; color:#444; font-size:14px; }
+.nota-pequena { font-size:13px; color:#666; margin-top:8px; }
+
+/* Responsividade pequena */
+@media (max-width:600px) {
+    .perfil-wrap-cfg { flex-direction:column; align-items:flex-start; }
+    .cp-avatar { width:96px; height:96px; }
+}
+
+/* Aba ativa - caso queira estilizar a aba ativa */
+.perfil-menu a[data-tab].ativo { border-bottom:2px solid #6d8140; padding-bottom:6px; }
+
+
+
+body.config-ativo footer {
+    display: none !important;
+}
+
+.config-foto-perfil h3 {
+    color: #6d8140;
+    font-size: 30px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.blocoConfig {
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.blocoConfig input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.blocoConfig button {
+    margin-top: 10px;
+    padding: 10px 18px;
+    border: none;
+    background: #6d8140;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.blocoConfig h3 {
+    color: #6d8140;
+    font-size: 30px;
+    text-align: left;
+}
+
+.blocoConfig label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+#configuracoes .blocoHero-duasTabelas {
+  /* transforma o container em linha só dentro de #configuracoes */
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-start;
+    padding: 24px;
+}
+
+/* faz cada coluna flexível; foto menor e nome com largura controlada */
+#configuracoes .config-foto-perfil {
+    flex: 0 0 56%;           /* ocupa ~56% do espaço — ajuste se quiser */
+    max-width: 760px;
+}
+
+#configuracoes .blocoConfig {
+    flex: 0 0 38%;           /* ocupa ~38% do espaço */
+    max-width: 380px;
+    align-self: flex-start;
+    background: #f7f3f1;
+
+}
+
+/* garante que o conteúdo interno da foto fique organizado */
+#configuracoes .perfil-wrap-cfg {
+    align-items: flex-start; /* imagem + controles empilhados no topo */
+}
+
+/* se quiser o avatar maior na área de config (opcional) */
+#configuracoes .cp-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+    border-radius: 50%;
+}
+
+/* responsivo: em telas pequenas volta a empilhar verticalmente */
+@media (max-width: 900px) {
+    #configuracoes .blocoHero-duasTabelas {
+    flex-direction: column;
+}
+#configuracoes .config-foto-perfil,
+#configuracoes .blocoConfig {
+    flex: 1 1 auto;
+    max-width: none;
+}
+}
+
+
+.rr-modalOverlay {
+    display: none;               /* comportamento antigo: oculto por display */
+    position: fixed;
+    inset: 0;      /* fundo opaco, nada de transparência */
+    z-index: 1600;
+    align-items: center;
+    justify-content: center;
+    background: rgba(117, 116, 116, 0.671);
+    backdrop-filter: blur(6px); /* opcional, deixa efeito vidro */
+    -webkit-backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+.rr-modal {
+    background-color: #f7f3f1;
+    color: #1a1a1a;
+    max-width: 920px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 48px rgba(0,0,0,0.45);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* acessibilidade: permite foco direto no container */
+    outline: none;
+}
+
+.rr-modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.rr-modalHeader h3 { margin: 0; font-size: 18px; }
+
+
+.rr-modalClose:hover { background: rgba(0,0,0,0.04); }
+
+.rr-modalBody {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 18px;
+    padding: 16px 18px;
+}
+@media (max-width: 920px) { .rr-modalBody { grid-template-columns: 1fr; } }
+
+.rr-summary h4, .rr-breakdown h4, .rr-last7 h4 { margin: 0 0 8px 0; font-size: 14px; color: #6d8140; }
+.rr-summary p { margin: 6px 0; color: #6b6b6b; font-size: 14px; }
+
+.rr-list7 { list-style: none; padding: 0; margin: 0; max-height: 180px; overflow: auto; font-size: 14px; }
+.rr-list7 li { padding: 8px 6px; border-bottom: 1px dashed rgba(0,0,0,0.04); }
+
+#rr-breakTable { width: 100%; border-collapse: collapse; font-size: 14px; }
+#rr-breakTable thead th { font-weight:700; text-align:left; padding:8px 6px; }
+#rr-breakTable tbody td { padding:8px 6px; border-top:1px solid rgba(0,0,0,0.06); }
+
+.rr-modalFooter { padding: 10px 16px; border-top: 1px solid rgba(0,0,0,0.06); display:flex; justify-content:flex-end; }
+.rr-closeBtn { padding:8px 12px; border-radius:8px; border:none; background:#6d8140; color:#fff; cursor:pointer; }
+
+/* acessibilidade para focar com teclado */
+.rr-modal[tabindex="-1"]:focus { box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+
+.rr-modalOverlay {
+    opacity: 0;
+    transition: opacity 320ms cubic-bezier(.2,.9,.3,1);
+    will-change: opacity, transform;
+}
+
+/* estado "visível" controlado pela classe adicionada via JS */
+.rr-modalOverlay.rr-visible {
+    opacity: 1;
+}
+
+/* animação do conteúdo interior (o modal em si): leve slide + fade */
+.rr-modal {
+    transform: translateY(8px);
+    opacity: 0;
+    transition: transform 320ms cubic-bezier(.16,.9,.3,1), opacity 260ms ease;
+    will-change: transform, opacity;
+}
+
+/* quando overlay recebe .rr-visible, anima o modal para o estado visível */
+.rr-modalOverlay.rr-visible .rr-modal {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.rr-modalOverlay {
+    opacity: 0;
+    transition: opacity 0.28s ease;
+}
+
+.rr-modalOverlay.rr-show {
+    opacity: 1;
+}
+
+.rr-modal {
+    transform: scale(0.94);
+    opacity: 0;
+    transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.rr-modal.rr-enter {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.rr-modal.rr-exit {
+    transform: scale(0.94);
+    opacity: 0;
+}
+
+#rr-modalTitle {
+    color: #6d8140;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.top-track h4 {
+    color: #df8b96;
+    font-weight: bold;
+    font-size: 25px;
+}

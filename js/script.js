@@ -268,8 +268,6 @@ function inicializarBotoes() {
         });
     }
     
-    
-   
     const cards = document.querySelectorAll('.cardRecurso');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -309,12 +307,13 @@ function estaNaTela(elemento) {
 console.log('✅ Todas as funcionalidades JavaScript foram carregadas!');
 
 document.addEventListener('keydown', (e) => {
-  if (e.key.toLowerCase() === 't') {
+    if (e.key.toLowerCase() === 't') {
     const b = document.body;
     const escuro = b.classList.toggle('tema-escuro');
     localStorage.setItem('temaRecycle', escuro ? 'escuro' : 'claro');
     console.log('Tema:', escuro ? 'escuro' : 'claro');
-  }
+
+}
 });
 
 const p = document.getElementById('btnPontos');
@@ -354,4 +353,33 @@ document.addEventListener('DOMContentLoaded', function() {
             menuLogin.classList.remove('active');
         }
     });
+});
+
+const counters = document.querySelectorAll('.contador');
+
+counters.forEach(counter => {
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target'); // número final
+        const count = +counter.innerText; // número atual
+        const increment = target / 200; // velocidade do contador
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            requestAnimationFrame(updateCounter); // animação suave
+        } else {
+            counter.innerText = target; // garante que termina exato
+        }
+    }
+
+    // Função para iniciar contador quando o elemento aparece na tela
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                updateCounter();
+                observer.unobserve(counter); // executa apenas uma vez
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(counter);
 });
